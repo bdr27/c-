@@ -1,0 +1,13 @@
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\ComputeAverageAge\GUIComputerAverageAge\bin\Debug\GUIComputerAverageAge.exe.config
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\ComputeAverageAge\GUIComputerAverageAge\obj\Debug\GUIComputerAverageAge.csprojResolveAssemblyReference.cache
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\ComputeAverageAge\GUIComputerAverageAge\obj\Debug\App.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\ComputeAverageAge\GUIComputerAverageAge\obj\Debug\GUIComputerAverageAge_MarkupCompile.cache
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\ComputeAverageAge\GUIComputerAverageAge\bin\Debug\GUIComputerAverageAge.exe
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\ComputeAverageAge\GUIComputerAverageAge\bin\Debug\GUIComputerAverageAge.pdb
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\ComputeAverageAge\GUIComputerAverageAge\obj\Debug\MainWindow.baml
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\ComputeAverageAge\GUIComputerAverageAge\obj\Debug\MainWindow.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\ComputeAverageAge\GUIComputerAverageAge\obj\Debug\GUIComputerAverageAge.g.resources
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\ComputeAverageAge\GUIComputerAverageAge\obj\Debug\GUIComputerAverageAge.Properties.Resources.resources
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\ComputeAverageAge\GUIComputerAverageAge\obj\Debug\GUIComputerAverageAge.csproj.GenerateResource.Cache
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\ComputeAverageAge\GUIComputerAverageAge\obj\Debug\GUIComputerAverageAge.exe
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\ComputeAverageAge\GUIComputerAverageAge\obj\Debug\GUIComputerAverageAge.pdb

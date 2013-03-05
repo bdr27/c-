@@ -1,0 +1,6 @@
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\ComputeAverageAge\ComputeAverageAge\bin\Debug\ComputeAverageAge.exe.config
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\ComputeAverageAge\ComputeAverageAge\bin\Debug\ComputeAverageAge.exe
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\ComputeAverageAge\ComputeAverageAge\bin\Debug\ComputeAverageAge.pdb
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\ComputeAverageAge\ComputeAverageAge\obj\Debug\ComputeAverageAge.csprojResolveAssemblyReference.cache
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\ComputeAverageAge\ComputeAverageAge\obj\Debug\ComputeAverageAge.exe
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\ComputeAverageAge\ComputeAverageAge\obj\Debug\ComputeAverageAge.pdb
