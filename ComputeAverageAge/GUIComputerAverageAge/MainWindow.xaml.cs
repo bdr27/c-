@@ -24,19 +24,25 @@ namespace GUIComputerAverageAge
         public MainWindow()
         {
             InitializeComponent();
-           // Result.Text = "Hello World";
         }
 
         private void btnCompute_Click(object sender, RoutedEventArgs e)
         {
+            //Gets the average age from a string of ages
             double averageAge = getAverageAge(AgeValues.Text);
+            //Prints result to text
             Result.Text = "Result: " + averageAge;
         }
+
+        /*
+         * Works out the average age based on a string of ages.
+         */
         private double getAverageAge(String listOfAges){
             double totalAge = 0;
             double sum = 0;
             String[] arrayOfAges = listOfAges.Split(' ');
 
+            //Goes through eage age in the array of ages and checks if it's int parsable
             foreach (String age in arrayOfAges)
             {
                 try
@@ -49,7 +55,6 @@ namespace GUIComputerAverageAge
                     Console.WriteLine("invalid charater");
                 }
             }
-
             return totalAge / sum;
         }
     }

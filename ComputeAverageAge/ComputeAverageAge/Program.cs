@@ -9,15 +9,15 @@ namespace ComputeAverageAge
 {
     class Program
     {
-        const Boolean DEBUG = true;
+        const Boolean DEBUG = false;
         static void Main(string[] args)
         {
             float sum = 0;
             int amount = 5;
-            ArrayList ages = new ArrayList();
-
+            ArrayList ages = new ArrayList();            
+            
             Console.WriteLine("Hello world!");
-
+            
             //Gets 5 ages from the user
             for (int i = 0; i < amount; i++)
             {
@@ -33,8 +33,10 @@ namespace ComputeAverageAge
             }
 
             //sorts the ages to find the mean
-            ages.Sort();          
-            float mean = sum / 5.0f;
+            ages.Sort();
+            float mean = sum / amount;
+
+            Console.WriteLine("The sum is: " + sum);
             Console.WriteLine("mean is " + mean);
             Console.WriteLine("median is " + ages[amount/2]);
             Console.ReadKey();
