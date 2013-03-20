@@ -22,8 +22,8 @@ namespace TicTacToeClient
         public NetworkInformationWindow()
         {
             InitializeComponent();
-            btnOkay.IsEnabled = false;
             btnOkay.Click += btnOkay_Click;
+            enableButton(btnOkay, txtBoxIPAddress.Text);
         }
 
         private void btnOkay_Click(object sender, RoutedEventArgs e)
@@ -34,15 +34,18 @@ namespace TicTacToeClient
         private void txtBoxIPAddress_TextChanged(object sender, TextChangedEventArgs e)
         {
             String ipAddress = txtBoxIPAddress.Text;
+            enableButton(btnOkay, ipAddress);
+        }
 
-            //Makes sure it can't be an empty string or only contain spaces
-            if (ipAddress.Equals(""))
+        private void enableButton(Button button, String textBlock)
+        {
+            if (textBlock.Equals(""))
             {
-                btnOkay.IsEnabled = false;
+                button.IsEnabled = false;
             }
             else
             {
-                btnOkay.IsEnabled = true;
+                button.IsEnabled = true;
             }
         }
     }

@@ -25,14 +25,17 @@ namespace TicTacToeClient
             player1Window.Title = "Player 1 Window";
             player2Window.Title = "Player 2 Window";
 
-            player2Window.Show();
-            
+            player1Window.Show();            
 
             NetworkInformationWindow dialog = new NetworkInformationWindow();
-            dialog.Owner = player2Window;
+            dialog.Owner = player1Window;
             dialog.ShowDialog();
 
-            player1Window.Show();
+            player2Window.Show();
+
+            NetworkInformationWindow dialog2 = new NetworkInformationWindow();
+            dialog2.Owner = player2Window;
+            dialog2.ShowDialog();
         }
     }
 }
