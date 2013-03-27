@@ -9,6 +9,6 @@ namespace TestMessagingSystem
     struct User
     {
         public string name;
-        List<Score> scores;
+        public List<Score> scores;
     }
 }
