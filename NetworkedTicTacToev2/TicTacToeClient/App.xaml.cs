@@ -17,6 +17,7 @@ namespace TicTacToeClient
         private MainWindow player1Window;
         private MainWindow player2Window;
         private String networkIPAddress;
+        private bool player2Display = false;
 
         public App()
             : base()
@@ -25,6 +26,7 @@ namespace TicTacToeClient
 
             player1Window.Title = "Player 1 Window";            
 
+            //Wires handlers
             wireHandlers(player1Window);
             
             //player1Window.AddIPAddressMenuItemHandler(HandleIPAddressMenuItem);
@@ -58,8 +60,9 @@ namespace TicTacToeClient
             dialog.ShowDialog();
             networkIPAddress = dialog.GetIPAddress();
             System.Diagnostics.Debug.WriteLine("Address is: " + networkIPAddress);
-            if(networkIPAddress.Equals("127.0.0.1"))
+            if(networkIPAddress.Equals("127.0.0.1") && !player2Display)
             {
+                player2Display = true;
                 player2Window = new MainWindow();
                 player2Window.Title = "Player 2 Window";
                 wireHandlers(player2Window);

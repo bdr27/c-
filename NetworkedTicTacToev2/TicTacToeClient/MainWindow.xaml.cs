@@ -24,15 +24,15 @@ namespace TicTacToeClient
         {
             InitializeComponent();
             GameBoard.ShowPiece(0, true);
-            GameBoard.SetPieceColor(0, Brushes.Black);
+            GameBoard.SetPieceColor(0, Brushes.Red);
             GameBoard.ShowPiece(5, true);
-            GameBoard.SetPieceColor(5, Brushes.White);
+            GameBoard.SetPieceColor(5, Brushes.Blue);
         }
 
         public void AddIPAddressMenuItemHandler(RoutedEventHandler handler)
         {
             AddIPAddressMenuItem.Click += handler;
-            Console.Write("I am here");
+            //Console.Write("I am here");
         }
 
         internal void AddIPAddressMenuItemHandler(Action HandleIPAddressMenuItem)
