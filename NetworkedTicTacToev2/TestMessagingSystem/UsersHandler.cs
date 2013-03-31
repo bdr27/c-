@@ -11,6 +11,7 @@ namespace TestMessagingSystem
     {
         private State state;
         private List<User> users;
+        private bool DEBUG = true;
 
         public UsersHandler()
         {
@@ -126,7 +127,28 @@ namespace TestMessagingSystem
                     }
                     break;
             }
+            if (DEBUG)
+            {
+                printDebug();
+            }
             return response;
+        }
+
+        private void printDebug()
+        {
+            Console.WriteLine("\n\nDEBUG INFO\n\n");
+            Console.WriteLine("Current State: " + state.ToString());
+            Console.WriteLine("\nUsers\n");
+            foreach (User user in users)
+            {
+                Console.WriteLine("Name: " + user.name);
+                Console.Write("Score : ");
+                foreach (Score score in user.scores)
+                {
+                    Console.Write(score.date.ToString() + ": " + score.moveCount + ", ");
+                }
+                Console.WriteLine("\n");
+            }
         }
         private void addUser(string name)
         {
@@ -145,6 +167,7 @@ namespace TestMessagingSystem
                 {
                     Score score = new Score();
                     score.moveCount = movecount;
+                    score.date = DateTime.Now;
                     users[i].scores.Add(score);
                     exists = true;
                     break;
