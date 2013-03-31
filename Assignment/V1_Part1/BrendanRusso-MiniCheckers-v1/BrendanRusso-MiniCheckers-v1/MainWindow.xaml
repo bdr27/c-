@@ -1,133 +1,17 @@
 ﻿<Window x:Class="BrendanRusso_MiniCheckers_v1.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:board="clr-namespace:BrendanRusso_MiniCheckers_v1"
         Title="Brendan Russo - Mini Checkers v1" Height="350" Width="525">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Rectangle Grid.Column="0" Grid.Row="0" Fill="White"/>
-        <Rectangle Grid.Column="1" Grid.Row="0" Fill="Black"/>
-        <Rectangle Grid.Column="2" Grid.Row="0" Fill="White"/>
-        <Rectangle Grid.Column="3" Grid.Row="0" Fill="Black"/>
-        <Rectangle Grid.Column="4" Grid.Row="0" Fill="White"/>
-        <Rectangle Grid.Column="5" Grid.Row="0" Fill="Black"/>
-        <Rectangle Grid.Column="6" Grid.Row="0" Fill="White"/>
-        <Rectangle Grid.Column="7" Grid.Row="0" Fill="Black"/>
-
-        <Rectangle Grid.Column="0" Grid.Row="1" Fill="Black"/>
-        <Rectangle Grid.Column="1" Grid.Row="1" Fill="White"/>
-        <Rectangle Grid.Column="2" Grid.Row="1" Fill="Black"/>
-        <Rectangle Grid.Column="3" Grid.Row="1" Fill="White"/>
-        <Rectangle Grid.Column="4" Grid.Row="1" Fill="Black"/>
-        <Rectangle Grid.Column="5" Grid.Row="1" Fill="White"/>
-        <Rectangle Grid.Column="6" Grid.Row="1" Fill="Black"/>
-        <Rectangle Grid.Column="7" Grid.Row="1" Fill="White"/>
-
-        <Rectangle Grid.Column="0" Grid.Row="2" Fill="White"/>
-        <Rectangle Grid.Column="1" Grid.Row="2" Fill="Black"/>
-        <Rectangle Grid.Column="2" Grid.Row="2" Fill="White"/>
-        <Rectangle Grid.Column="3" Grid.Row="2" Fill="Black"/>
-        <Rectangle Grid.Column="4" Grid.Row="2" Fill="White"/>
-        <Rectangle Grid.Column="5" Grid.Row="2" Fill="Black"/>
-        <Rectangle Grid.Column="6" Grid.Row="2" Fill="White"/>
-        <Rectangle Grid.Column="7" Grid.Row="2" Fill="Black"/>
-
-        <Rectangle Grid.Column="0" Grid.Row="3" Fill="Black"/>
-        <Rectangle Grid.Column="1" Grid.Row="3" Fill="White"/>
-        <Rectangle Grid.Column="2" Grid.Row="3" Fill="Black"/>
-        <Rectangle Grid.Column="3" Grid.Row="3" Fill="White"/>
-        <Rectangle Grid.Column="4" Grid.Row="3" Fill="Black"/>
-        <Rectangle Grid.Column="5" Grid.Row="3" Fill="White"/>
-        <Rectangle Grid.Column="6" Grid.Row="3" Fill="Black"/>
-        <Rectangle Grid.Column="7" Grid.Row="3" Fill="White"/>
-
-        <Rectangle Grid.Column="0" Grid.Row="4" Fill="White"/>
-        <Rectangle Grid.Column="1" Grid.Row="4" Fill="Black"/>
-        <Rectangle Grid.Column="2" Grid.Row="4" Fill="White"/>
-        <Rectangle Grid.Column="3" Grid.Row="4" Fill="Black"/>
-        <Rectangle Grid.Column="4" Grid.Row="4" Fill="White"/>
-        <Rectangle Grid.Column="5" Grid.Row="4" Fill="Black"/>
-        <Rectangle Grid.Column="6" Grid.Row="4" Fill="White"/>
-        <Rectangle Grid.Column="7" Grid.Row="4" Fill="Black"/>
-
-        <Rectangle Grid.Column="0" Grid.Row="5" Fill="Black"/>
-        <Rectangle Grid.Column="1" Grid.Row="5" Fill="White"/>
-        <Rectangle Grid.Column="2" Grid.Row="5" Fill="Black"/>
-        <Rectangle Grid.Column="3" Grid.Row="5" Fill="White"/>
-        <Rectangle Grid.Column="4" Grid.Row="5" Fill="Black"/>
-        <Rectangle Grid.Column="5" Grid.Row="5" Fill="White"/>
-        <Rectangle Grid.Column="6" Grid.Row="5" Fill="Black"/>
-        <Rectangle Grid.Column="7" Grid.Row="5" Fill="White"/>
-
-        <Rectangle Grid.Column="0" Grid.Row="6" Fill="White"/>
-        <Rectangle Grid.Column="1" Grid.Row="6" Fill="Black"/>
-        <Rectangle Grid.Column="2" Grid.Row="6" Fill="White"/>
-        <Rectangle Grid.Column="3" Grid.Row="6" Fill="Black"/>
-        <Rectangle Grid.Column="4" Grid.Row="6" Fill="White"/>
-        <Rectangle Grid.Column="5" Grid.Row="6" Fill="Black"/>
-        <Rectangle Grid.Column="6" Grid.Row="6" Fill="White"/>
-        <Rectangle Grid.Column="7" Grid.Row="6" Fill="Black"/>
-
-        <Rectangle Grid.Column="0" Grid.Row="7" Fill="Black"/>
-        <Rectangle Grid.Column="1" Grid.Row="7" Fill="White"/>
-        <Rectangle Grid.Column="2" Grid.Row="7" Fill="Black"/>
-        <Rectangle Grid.Column="3" Grid.Row="7" Fill="White"/>
-        <Rectangle Grid.Column="4" Grid.Row="7" Fill="Black"/>
-        <Rectangle Grid.Column="5" Grid.Row="7" Fill="White"/>
-        <Rectangle Grid.Column="6" Grid.Row="7" Fill="Black"/>
-        <Rectangle Grid.Column="7" Grid.Row="7" Fill="White"/>
-        
-        <!--Top player-->
-        <Ellipse Grid.Column="1" Grid.Row="0" Fill="Fuchsia"/>
-        <Ellipse Grid.Column="3" Grid.Row="0" Fill="Fuchsia"/>
-        <Ellipse Grid.Column="5" Grid.Row="0" Fill="Fuchsia"/>
-        <Ellipse Grid.Column="7" Grid.Row="0" Fill="Fuchsia"/>
-
-        <Ellipse Grid.Column="0" Grid.Row="1" Fill="Fuchsia"/>
-        <Ellipse Grid.Column="2" Grid.Row="1" Fill="Fuchsia"/>
-        <Ellipse Grid.Column="4" Grid.Row="1" Fill="Fuchsia"/>
-        <Ellipse Grid.Column="6" Grid.Row="1" Fill="Fuchsia"/>
-
-        <Ellipse Grid.Column="1" Grid.Row="2" Fill="Fuchsia"/>
-        <Ellipse Grid.Column="3" Grid.Row="2" Fill="Fuchsia"/>
-        <Ellipse Grid.Column="5" Grid.Row="2" Fill="Fuchsia"/>
-        <Ellipse Grid.Column="7" Grid.Row="2" Fill="Fuchsia"/>
-
-        <!--Bottom Player-->
-        <Ellipse Grid.Column="0" Grid.Row="5" Fill="Navy"/>
-        <Ellipse Grid.Column="2" Grid.Row="5" Fill="Navy"/>
-        <Ellipse Grid.Column="4" Grid.Row="5" Fill="Navy"/>
-        <Ellipse Grid.Column="6" Grid.Row="5" Fill="Navy"/>
-
-        <Ellipse Grid.Column="1" Grid.Row="6" Fill="Navy"/>
-        <Ellipse Grid.Column="3" Grid.Row="6" Fill="Navy"/>
-        <Ellipse Grid.Column="5" Grid.Row="6" Fill="Navy"/>
-        <Ellipse Grid.Column="7" Grid.Row="6" Fill="Navy"/>
-
-        <Ellipse Grid.Column="0" Grid.Row="7" Fill="Navy"/>
-        <Ellipse Grid.Column="2" Grid.Row="7" Fill="Navy"/>
-        <Ellipse Grid.Column="4" Grid.Row="7" Fill="Navy"/>
-        <Ellipse Grid.Column="6" Grid.Row="7" Fill="Navy"/>
-
-        
-
-    </Grid>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Game">
+                <MenuItem x:Name="AddIPAddressMenuItem" Header="Set IP Address" />
+                <MenuItem Header="Set Name" />
+            </MenuItem>
+        </Menu>
+        <TextBlock DockPanel.Dock="Bottom" Name="GameStatus" Text="Status: Waiting for valid IP...">
+        </TextBlock>
+        <board:MiniCheckersBoard x:Name="GameBoard"/>
+    </DockPanel>
 </Window>

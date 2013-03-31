@@ -16,19 +16,13 @@ using System.Windows.Shapes;
 namespace BrendanRusso_MiniCheckers_v1
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MiniCheckersBoard.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MiniCheckersBoard : UserControl
     {
-        public MainWindow()
+        public MiniCheckersBoard()
         {
             InitializeComponent();
-        }
-
-        public void AddIPAddressMenuItemHandler(RoutedEventHandler handler)
-        {
-            AddIPAddressMenuItem.Click += handler;
-            Console.Write("I am here");
         }
     }
 }
