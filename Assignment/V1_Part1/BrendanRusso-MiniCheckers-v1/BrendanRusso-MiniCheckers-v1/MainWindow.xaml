@@ -23,6 +23,111 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        <Rectangle Grid.Column="0" Grid.Row="0" Fill="White"/>
+        <Rectangle Grid.Column="1" Grid.Row="0" Fill="Black"/>
+        <Rectangle Grid.Column="2" Grid.Row="0" Fill="White"/>
+        <Rectangle Grid.Column="3" Grid.Row="0" Fill="Black"/>
+        <Rectangle Grid.Column="4" Grid.Row="0" Fill="White"/>
+        <Rectangle Grid.Column="5" Grid.Row="0" Fill="Black"/>
+        <Rectangle Grid.Column="6" Grid.Row="0" Fill="White"/>
+        <Rectangle Grid.Column="7" Grid.Row="0" Fill="Black"/>
+
+        <Rectangle Grid.Column="0" Grid.Row="1" Fill="Black"/>
+        <Rectangle Grid.Column="1" Grid.Row="1" Fill="White"/>
+        <Rectangle Grid.Column="2" Grid.Row="1" Fill="Black"/>
+        <Rectangle Grid.Column="3" Grid.Row="1" Fill="White"/>
+        <Rectangle Grid.Column="4" Grid.Row="1" Fill="Black"/>
+        <Rectangle Grid.Column="5" Grid.Row="1" Fill="White"/>
+        <Rectangle Grid.Column="6" Grid.Row="1" Fill="Black"/>
+        <Rectangle Grid.Column="7" Grid.Row="1" Fill="White"/>
+
+        <Rectangle Grid.Column="0" Grid.Row="2" Fill="White"/>
+        <Rectangle Grid.Column="1" Grid.Row="2" Fill="Black"/>
+        <Rectangle Grid.Column="2" Grid.Row="2" Fill="White"/>
+        <Rectangle Grid.Column="3" Grid.Row="2" Fill="Black"/>
+        <Rectangle Grid.Column="4" Grid.Row="2" Fill="White"/>
+        <Rectangle Grid.Column="5" Grid.Row="2" Fill="Black"/>
+        <Rectangle Grid.Column="6" Grid.Row="2" Fill="White"/>
+        <Rectangle Grid.Column="7" Grid.Row="2" Fill="Black"/>
+
+        <Rectangle Grid.Column="0" Grid.Row="3" Fill="Black"/>
+        <Rectangle Grid.Column="1" Grid.Row="3" Fill="White"/>
+        <Rectangle Grid.Column="2" Grid.Row="3" Fill="Black"/>
+        <Rectangle Grid.Column="3" Grid.Row="3" Fill="White"/>
+        <Rectangle Grid.Column="4" Grid.Row="3" Fill="Black"/>
+        <Rectangle Grid.Column="5" Grid.Row="3" Fill="White"/>
+        <Rectangle Grid.Column="6" Grid.Row="3" Fill="Black"/>
+        <Rectangle Grid.Column="7" Grid.Row="3" Fill="White"/>
+
+        <Rectangle Grid.Column="0" Grid.Row="4" Fill="White"/>
+        <Rectangle Grid.Column="1" Grid.Row="4" Fill="Black"/>
+        <Rectangle Grid.Column="2" Grid.Row="4" Fill="White"/>
+        <Rectangle Grid.Column="3" Grid.Row="4" Fill="Black"/>
+        <Rectangle Grid.Column="4" Grid.Row="4" Fill="White"/>
+        <Rectangle Grid.Column="5" Grid.Row="4" Fill="Black"/>
+        <Rectangle Grid.Column="6" Grid.Row="4" Fill="White"/>
+        <Rectangle Grid.Column="7" Grid.Row="4" Fill="Black"/>
+
+        <Rectangle Grid.Column="0" Grid.Row="5" Fill="Black"/>
+        <Rectangle Grid.Column="1" Grid.Row="5" Fill="White"/>
+        <Rectangle Grid.Column="2" Grid.Row="5" Fill="Black"/>
+        <Rectangle Grid.Column="3" Grid.Row="5" Fill="White"/>
+        <Rectangle Grid.Column="4" Grid.Row="5" Fill="Black"/>
+        <Rectangle Grid.Column="5" Grid.Row="5" Fill="White"/>
+        <Rectangle Grid.Column="6" Grid.Row="5" Fill="Black"/>
+        <Rectangle Grid.Column="7" Grid.Row="5" Fill="White"/>
+
+        <Rectangle Grid.Column="0" Grid.Row="6" Fill="White"/>
+        <Rectangle Grid.Column="1" Grid.Row="6" Fill="Black"/>
+        <Rectangle Grid.Column="2" Grid.Row="6" Fill="White"/>
+        <Rectangle Grid.Column="3" Grid.Row="6" Fill="Black"/>
+        <Rectangle Grid.Column="4" Grid.Row="6" Fill="White"/>
+        <Rectangle Grid.Column="5" Grid.Row="6" Fill="Black"/>
+        <Rectangle Grid.Column="6" Grid.Row="6" Fill="White"/>
+        <Rectangle Grid.Column="7" Grid.Row="6" Fill="Black"/>
+
+        <Rectangle Grid.Column="0" Grid.Row="7" Fill="Black"/>
+        <Rectangle Grid.Column="1" Grid.Row="7" Fill="White"/>
+        <Rectangle Grid.Column="2" Grid.Row="7" Fill="Black"/>
+        <Rectangle Grid.Column="3" Grid.Row="7" Fill="White"/>
+        <Rectangle Grid.Column="4" Grid.Row="7" Fill="Black"/>
+        <Rectangle Grid.Column="5" Grid.Row="7" Fill="White"/>
+        <Rectangle Grid.Column="6" Grid.Row="7" Fill="Black"/>
+        <Rectangle Grid.Column="7" Grid.Row="7" Fill="White"/>
         
+        <!--Top player-->
+        <Ellipse Grid.Column="1" Grid.Row="0" Fill="Fuchsia"/>
+        <Ellipse Grid.Column="3" Grid.Row="0" Fill="Fuchsia"/>
+        <Ellipse Grid.Column="5" Grid.Row="0" Fill="Fuchsia"/>
+        <Ellipse Grid.Column="7" Grid.Row="0" Fill="Fuchsia"/>
+
+        <Ellipse Grid.Column="0" Grid.Row="1" Fill="Fuchsia"/>
+        <Ellipse Grid.Column="2" Grid.Row="1" Fill="Fuchsia"/>
+        <Ellipse Grid.Column="4" Grid.Row="1" Fill="Fuchsia"/>
+        <Ellipse Grid.Column="6" Grid.Row="1" Fill="Fuchsia"/>
+
+        <Ellipse Grid.Column="1" Grid.Row="2" Fill="Fuchsia"/>
+        <Ellipse Grid.Column="3" Grid.Row="2" Fill="Fuchsia"/>
+        <Ellipse Grid.Column="5" Grid.Row="2" Fill="Fuchsia"/>
+        <Ellipse Grid.Column="7" Grid.Row="2" Fill="Fuchsia"/>
+
+        <!--Bottom Player-->
+        <Ellipse Grid.Column="0" Grid.Row="5" Fill="Navy"/>
+        <Ellipse Grid.Column="2" Grid.Row="5" Fill="Navy"/>
+        <Ellipse Grid.Column="4" Grid.Row="5" Fill="Navy"/>
+        <Ellipse Grid.Column="6" Grid.Row="5" Fill="Navy"/>
+
+        <Ellipse Grid.Column="1" Grid.Row="6" Fill="Navy"/>
+        <Ellipse Grid.Column="3" Grid.Row="6" Fill="Navy"/>
+        <Ellipse Grid.Column="5" Grid.Row="6" Fill="Navy"/>
+        <Ellipse Grid.Column="7" Grid.Row="6" Fill="Navy"/>
+
+        <Ellipse Grid.Column="0" Grid.Row="7" Fill="Navy"/>
+        <Ellipse Grid.Column="2" Grid.Row="7" Fill="Navy"/>
+        <Ellipse Grid.Column="4" Grid.Row="7" Fill="Navy"/>
+        <Ellipse Grid.Column="6" Grid.Row="7" Fill="Navy"/>
+
+        
+
     </Grid>
 </Window>
