@@ -15,3 +15,5 @@ E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\V1_Part1\BrendanRuss
 E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\V1_Part1\BrendanRusso-MiniCheckers-v1\BrendanRusso-MiniCheckers-v1\obj\Debug\BrendanRusso-MiniCheckers-v1.csproj.GenerateResource.Cache
 E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\V1_Part1\BrendanRusso-MiniCheckers-v1\BrendanRusso-MiniCheckers-v1\obj\Debug\BrendanRusso-MiniCheckers-v1.exe
 E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\V1_Part1\BrendanRusso-MiniCheckers-v1\BrendanRusso-MiniCheckers-v1\obj\Debug\BrendanRusso-MiniCheckers-v1.pdb
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\V1_Part1\BrendanRusso-MiniCheckers-v1\BrendanRusso-MiniCheckers-v1\obj\Debug\NetworkInformationWindow.baml
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\V1_Part1\BrendanRusso-MiniCheckers-v1\BrendanRusso-MiniCheckers-v1\obj\Debug\NetworkInformationWindow.g.cs
