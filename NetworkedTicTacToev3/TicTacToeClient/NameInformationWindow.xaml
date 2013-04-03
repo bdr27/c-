@@ -1,0 +1,10 @@
+﻿<Window x:Class="TicTacToeClient.NameInformationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="NameInformationWindow" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterOwner" ResizeMode="NoResize" WindowStyle="None" Topmost="True">
+    <Grid>
+        <Button Name="OkayButton" IsEnabled="False" Content="Okay" HorizontalAlignment="Left" Margin="113,38,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,13,0,0" TextWrapping="Wrap" Text="Name:" VerticalAlignment="Top"/>
+        <TextBox Name="NameField" HorizontalAlignment="Left" Height="23" Margin="73,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="209"/>
+    </Grid>
+</Window>

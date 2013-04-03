@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\Documents\Dropbox\University\2013S1\CP2011\c-\NetworkedTicTacToev2\TicTacToeClient\obj\Debug\
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\NetworkedTicTacToev3\TicTacToeClient\obj\Debug\
 TicTacToeClient
 none
 false
 DEBUG;TRACE
-E:\Documents\Dropbox\University\2013S1\CP2011\c-\NetworkedTicTacToev2\TicTacToeClient\App.xaml
-3-1147437402
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\NetworkedTicTacToev3\TicTacToeClient\App.xaml
+41634678131
 
-7-529078656
+12706552313
 141012385901
-MainWindow.xaml;NetworkInformationWindow.xaml;TicTacToeBoard.xaml;
+MainWindow.xaml;NameInformationWindow.xaml;NetworkInformationWindow.xaml;TicTacToeBoard.xaml;
 
 False
 

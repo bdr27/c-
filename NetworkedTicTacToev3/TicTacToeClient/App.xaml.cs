@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
@@ -15,19 +16,30 @@ namespace TicTacToeClient
     public partial class App : Application
     {
         private MainWindow player1Window;
+        private string player1Name;
+        private string player2Name;
         private MainWindow player2Window;
         private String networkIPAddress;
         private bool player2Display = false;
+        private MessageHandler handler;
 
         public App()
             : base()
         {
+            handler = new MOCKMessageHandler();
+            handler.connectTo("127.0.0.1", 50000);
+            //handler.sendRequest("SET_NAME,BrendanRusso");
+            Debug.WriteLine(handler.getResponse());
+            handler.sendRequest("PUT,BrendanRusso,3,1");
+            Debug.WriteLine(handler.getResponse());
+
             player1Window = new MainWindow();         
 
             player1Window.Title = "Player 1 Window";            
 
             //Wires handlers
             wireHandlers(player1Window);
+            player1Window.AddSetNameMenuItemHandler(HandleSetNamePlayer1MenuItem);
             
             //player1Window.AddIPAddressMenuItemHandler(HandleIPAddressMenuItem);
             //player1Window.GameBoard.AddMouseHandler(HandleMouseEvent);
@@ -39,6 +51,8 @@ namespace TicTacToeClient
         private void wireHandlers(MainWindow playerWindow)
         {
             playerWindow.AddIPAddressMenuItemHandler(HandleIPAddressMenuItem);
+            
+
             playerWindow.GameBoard.AddMouseHandler(HandleMouseEvent);
         }
 
@@ -67,7 +81,29 @@ namespace TicTacToeClient
                 player2Window.Title = "Player 2 Window";
                 wireHandlers(player2Window);
                 player2Window.Show();
+                player2Window.AddSetNameMenuItemHandler(HandleSetNamePlayer2MenuItem);
             }
+        }
+
+        private void HandleSetNamePlayer2MenuItem(object sender, RoutedEventArgs e)
+        {
+            NameInformationWindow dialog = new NameInformationWindow();
+            dialog.Owner = player2Window;
+            dialog.ShowDialog();
+            player2Name = dialog.getName();
+            Debug.WriteLine("Name is: " + player2Name);
+            handler.sendRequest("SET_NAME," + player2Name);
+
+        }
+
+        private void HandleSetNamePlayer1MenuItem(Object sender, RoutedEventArgs e)
+        {
+            NameInformationWindow dialog = new NameInformationWindow();
+            dialog.Owner = player1Window;
+            dialog.ShowDialog();
+            player1Name = dialog.getName();
+            Debug.WriteLine("Name is: " + player1Name);
+            handler.sendRequest("SET_NAME," + player1Name);
         }
     }
 }

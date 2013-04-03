@@ -39,5 +39,10 @@ namespace TicTacToeClient
         {
             throw new NotImplementedException();
         }
+
+        public void AddSetNameMenuItemHandler(RoutedEventHandler handler)
+        {
+            setName.Click += handler;
+        }
     }
 }
