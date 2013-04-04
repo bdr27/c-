@@ -33,19 +33,25 @@ namespace TicTacToeClient
             handler.sendRequest("PUT,BrendanRusso,3,1");
             Debug.WriteLine(handler.getResponse());
 
-            player1Window = new MainWindow();         
+            player1Window = new MainWindow();
+            player2Window = new MainWindow();
 
-            player1Window.Title = "Player 1 Window";            
+            player1Window.Title = "Player 1 Window";
+            player2Window.Title = "Player 2 Window";
+
+            player2Window.enableIpSet();
 
             //Wires handlers
             wireHandlers(player1Window);
+            wireHandlers(player2Window);
             player1Window.AddSetNameMenuItemHandler(HandleSetNamePlayer1MenuItem);
+            player2Window.AddSetNameMenuItemHandler(HandleSetNamePlayer2MenuItem);
             
             //player1Window.AddIPAddressMenuItemHandler(HandleIPAddressMenuItem);
             //player1Window.GameBoard.AddMouseHandler(HandleMouseEvent);
 
             player1Window.Show();
-            //player2Window.Show();                     
+            player2Window.Show();                     
         }
 
         private void wireHandlers(MainWindow playerWindow)
@@ -70,11 +76,13 @@ namespace TicTacToeClient
         private void HandleIPAddressMenuItem(object sender, RoutedEventArgs e)
         {
             NetworkInformationWindow dialog = new NetworkInformationWindow();
-            dialog.Owner = player1Window;
+            dialog.Owner = player2Window;
             dialog.ShowDialog();
             networkIPAddress = dialog.GetIPAddress();
             System.Diagnostics.Debug.WriteLine("Address is: " + networkIPAddress);
-            if(networkIPAddress.Equals("127.0.0.1") && !player2Display)
+            player2Window.disableIpAddress();
+            player1Window.enableName();
+            if(networkIPAddress.Equals("127.0.0.1") && !player2Display && false)
             {
                 player2Display = true;
                 player2Window = new MainWindow();
@@ -93,6 +101,7 @@ namespace TicTacToeClient
             player2Name = dialog.getName();
             Debug.WriteLine("Name is: " + player2Name);
             handler.sendRequest("SET_NAME," + player2Name);
+            player2Window.disableName();
 
         }
 
@@ -104,6 +113,8 @@ namespace TicTacToeClient
             player1Name = dialog.getName();
             Debug.WriteLine("Name is: " + player1Name);
             handler.sendRequest("SET_NAME," + player1Name);
+            player1Window.disableName();
+            player2Window.enableName();
         }
     }
 }

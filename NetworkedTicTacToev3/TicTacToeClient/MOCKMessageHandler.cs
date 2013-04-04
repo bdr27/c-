@@ -16,11 +16,12 @@ namespace TicTacToeClient
         public MOCKMessageHandler()
         {
             state = GameState.WAIT_PLAYER1_NAME;
+            Debug.WriteLine("The current state is: " + state.ToString());
         }
 
         public void connectTo(string address, int port)
         {
-            Debug.WriteLine(state.ToString());
+            //Debug.WriteLine(state.ToString());
             //throw new NotImplementedException();
         }
 
@@ -46,7 +47,7 @@ namespace TicTacToeClient
             {
                 response = "FAILED";
             }
-            Debug.WriteLine(state.ToString());
+            Debug.WriteLine("The current state is: " + state.ToString());
         }
 
         public string getResponse()

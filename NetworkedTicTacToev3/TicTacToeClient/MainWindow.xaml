@@ -6,8 +6,8 @@
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="Game">
-                <MenuItem x:Name="AddIPAddressMenuItem" Header="Set IP Address" />
-                <MenuItem Header="Set Name" Name="setName"/>
+                <MenuItem x:Name="AddIPAddressMenuItem" Header="Set IP Address" IsEnabled="False"/>
+                <MenuItem Header="Set Name" Name="setName" IsEnabled="False"/>
             </MenuItem>
         </Menu>
         <local:TicTacToeBoard x:Name="GameBoard"/>

@@ -44,5 +44,23 @@ namespace TicTacToeClient
         {
             setName.Click += handler;
         }
+
+        public void enableIpSet()
+        {
+            AddIPAddressMenuItem.IsEnabled = true;
+        }
+
+        public void disableIpAddress()
+        {
+            AddIPAddressMenuItem.IsEnabled = false;
+        }
+        public void enableName()
+        {
+            setName.IsEnabled = true;
+        }
+        public void disableName()
+        {
+            setName.IsEnabled = false;
+        }
     }
 }
