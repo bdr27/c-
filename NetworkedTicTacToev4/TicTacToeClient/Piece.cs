@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace TicTacToeClient
 {
-    enum Piece
+    public enum Piece
     {
+        EMPTY, PLAYER1, PLAYER2
     }
 }

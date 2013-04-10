@@ -8,6 +8,7 @@ namespace TicTacToeClient
     public class Cell
     {
         internal int row, col, ID;
+        internal Piece piece;
         private List<List<Cell>> winList;
         internal Cell above;
         internal Cell below;
@@ -51,8 +52,9 @@ namespace TicTacToeClient
                 message += "(";
                 for (int j = 0; j < winList[i].Count; j++)
                 {
-                    message += winList[i][j].getID();
+                    message = message + winList[i][j].getID() + ",";
                 }
+                message = message.Remove(message.Length - 1);
                 message += ") ";
             }
             return message;
@@ -93,6 +95,8 @@ namespace TicTacToeClient
             }
         }
 
+        
+
         private List<List<Cell>> setupwinListForCell_1()
         {
             List<List<Cell>> winLists = new List<List<Cell>>();
@@ -110,6 +114,159 @@ namespace TicTacToeClient
             winList.Add(new Cell(5));
             winList.Add(new Cell(9));
             winLists.Add(winList); //ID 5,9
+
+            return winLists;
+        }
+
+        private List<List<Cell>> setupwinListForCell_2()
+        {
+            List<List<Cell>> winLists = new List<List<Cell>>();
+            List<Cell> winList = new List<Cell>();
+            winList.Add(new Cell(1));
+            winList.Add(new Cell(3));
+            winLists.Add(winList); //ID 1,3
+
+            winList = new List<Cell>();
+            winList.Add(new Cell(5));
+            winList.Add(new Cell(8));
+            winLists.Add(winList); //ID 5,8
+
+            return winLists;
+        }
+
+        private List<List<Cell>> setupwinListForCell_3()
+        {
+            List<List<Cell>> winLists = new List<List<Cell>>();
+            List<Cell> winList = new List<Cell>();
+            winList.Add(new Cell(2));
+            winList.Add(new Cell(1));
+            winLists.Add(winList); //ID 2,1
+
+            winList = new List<Cell>();
+            winList.Add(new Cell(5));
+            winList.Add(new Cell(7));
+            winLists.Add(winList); //ID 5,7
+
+            winList = new List<Cell>();
+            winList.Add(new Cell(6));
+            winList.Add(new Cell(9));
+            winLists.Add(winList); //ID 6,9
+
+            return winLists;
+        }
+
+        private List<List<Cell>> setupwinListForCell_4()
+        {
+            List<List<Cell>> winLists = new List<List<Cell>>();
+            List<Cell> winList = new List<Cell>();
+            winList.Add(new Cell(1));
+            winList.Add(new Cell(7));
+            winLists.Add(winList); //ID 1,7
+
+            winList = new List<Cell>();
+            winList.Add(new Cell(5));
+            winList.Add(new Cell(6));
+            winLists.Add(winList); //ID 5,6
+
+            return winLists;
+        }
+
+        private List<List<Cell>> setupwinListForCell_5()
+        {
+            List<List<Cell>> winLists = new List<List<Cell>>();
+            List<Cell> winList = new List<Cell>();
+            winList.Add(new Cell(2));
+            winList.Add(new Cell(8));
+            winLists.Add(winList); //ID 2,8
+
+            winList = new List<Cell>();
+            winList.Add(new Cell(1));
+            winList.Add(new Cell(9));
+            winLists.Add(winList); //ID 1,9
+
+            winList = new List<Cell>();
+            winList.Add(new Cell(3));
+            winList.Add(new Cell(7));
+            winLists.Add(winList); //ID 3,7
+
+            winList = new List<Cell>();
+            winList.Add(new Cell(4));
+            winList.Add(new Cell(6));
+            winLists.Add(winList); //ID 4,6
+
+            return winLists;
+        }
+
+        private List<List<Cell>> setupwinListForCell_6()
+        {
+            List<List<Cell>> winLists = new List<List<Cell>>();
+            List<Cell> winList = new List<Cell>();
+            winList.Add(new Cell(9));
+            winList.Add(new Cell(3));
+            winLists.Add(winList); //ID 9,3
+
+            winList = new List<Cell>();
+            winList.Add(new Cell(4));
+            winList.Add(new Cell(5));
+            winLists.Add(winList); //ID 4,5
+
+            return winLists;
+        }
+
+        private List<List<Cell>> setupwinListForCell_7()
+        {
+            List<List<Cell>> winLists = new List<List<Cell>>();
+            List<Cell> winList = new List<Cell>();
+            winList.Add(new Cell(1));
+            winList.Add(new Cell(4));
+            winLists.Add(winList); //ID 1,4
+
+            winList = new List<Cell>();
+            winList.Add(new Cell(3));
+            winList.Add(new Cell(5));
+            winLists.Add(winList); //ID 3,5
+
+            winList = new List<Cell>();
+            winList.Add(new Cell(8));
+            winList.Add(new Cell(9));
+            winLists.Add(winList); //ID 8,9
+
+            return winLists;
+        }
+
+        private List<List<Cell>> setupwinListForCell_8()
+        {
+            List<List<Cell>> winLists = new List<List<Cell>>();
+            List<Cell> winList = new List<Cell>();
+            winList.Add(new Cell(2));
+            winList.Add(new Cell(5));
+            winLists.Add(winList); //ID 2,5
+
+            winList = new List<Cell>();
+            winList.Add(new Cell(9));
+            winList.Add(new Cell(7));
+            winLists.Add(winList); //ID 9,7
+
+            return winLists;
+        }
+
+        private List<List<Cell>> setupwinListForCell_9()
+        {
+            List<List<Cell>> winLists = new List<List<Cell>>();
+            List<Cell> winList = new List<Cell>();
+            winList.Add(new Cell(1));
+            winList.Add(new Cell(5));
+            winLists.Add(winList); //ID 1,5
+
+            winList = new List<Cell>();
+            winList.Add(new Cell(8));
+            winList.Add(new Cell(7));
+            winLists.Add(winList); //ID 7,8
+
+            winList = new List<Cell>();
+            winList.Add(new Cell(3));
+            winList.Add(new Cell(6));
+            winLists.Add(winList); //ID 3,6
 
             return winLists;
         }

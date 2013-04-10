@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace TicTacToeClient
 {
@@ -22,8 +23,10 @@ namespace TicTacToeClient
                     {
                         row = i,
                         col = j,
-                        ID = nextID++
+                        ID = nextID++,
+                        
                     };
+                    cells[i, j].setupCells();
                 }
             }
 
@@ -44,22 +47,46 @@ namespace TicTacToeClient
 
         public void ResetPiece()
         {
+            foreach (var cell in cells)
+            {
+                cell.piece = Piece.EMPTY;
+            }
         }
 
         public bool isValidMove(string move)
         {
-            bool valid = true;
+            bool valid = false;
+            if (Regex.Match(move, @"^[1-3]+[1-3]$").Success)
+            {
+                char[] moveChars = move.ToCharArray();
+                int x = Int32.Parse(moveChars[0].ToString()) - 1;
+                int y = Int32.Parse(moveChars[1].ToString()) - 1;
+                Console.WriteLine("Cell [x,y]: [" + x + "," + y + "]");
+                if (cells[x, y].piece.Equals(Piece.EMPTY))
+                {
+                    valid = true;
+                }
+            }
             return valid;
         }
 
-        //public void Move(string move, Piece piece)
-        //{
-       // }
+        public void Move(string move, Piece piece)
+        {
+            char[] moveChars = move.ToCharArray();
+            int x = Int32.Parse(moveChars[0].ToString()) - 1;
+            int y = Int32.Parse(moveChars[1].ToString()) - 1;
+            cells[x, y].piece = piece;
+        }
 
         public string GetPieces()
         {
             string pieces = "";
             return pieces;
+        }
+
+        public Cell[,] getCells()
+        {
+            return cells;
         }
 
 
