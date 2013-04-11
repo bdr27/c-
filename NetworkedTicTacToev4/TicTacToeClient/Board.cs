@@ -80,8 +80,21 @@ namespace TicTacToeClient
 
         public string GetPieces()
         {
-            string pieces = "";
-            return pieces;
+            string player1Pieces = "";
+            string player2Pieces = "";
+
+            foreach (var cell in cells)
+            {
+                if (cell.piece.Equals(Piece.PLAYER1))
+                {
+                    player1Pieces = player1Pieces + "N" + (cell.row + 1) + (cell.col + 1);
+                }
+                else if (cell.piece.Equals(Piece.PLAYER2))
+                {
+                    player2Pieces = player2Pieces + "N" + (cell.row + 1) + (cell.col + 1);
+                }
+            }
+            return player1Pieces + "|" + player2Pieces;
         }
 
         public Cell[,] getCells()

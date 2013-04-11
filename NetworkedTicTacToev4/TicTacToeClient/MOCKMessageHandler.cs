@@ -20,6 +20,8 @@ namespace TicTacToeClient
         private GameState gameState;
         private string response;
         private string player1Name, player2Name;
+        private Board board;
+        private string currentPlayer;
 
         public MOCKMessageHandler()
         {
@@ -52,6 +54,7 @@ namespace TicTacToeClient
                         if (name != player1Name)
                         {
                             gameState = GameState.PLAYER1_MOVING;
+                            currentPlayer = player1Name;
                             player2Name = name;
                             response = "OKAY";
                         }
@@ -59,12 +62,14 @@ namespace TicTacToeClient
                     break;
                 case GameState.PLAYER1_MOVING:
                     if (Regex.Match(request, @"^PUT,[A-Za-z]+,[1-3],[1-3]$").Success) {
+                        currentPlayer = player2Name;
                         gameState = GameState.PLAYER2_MOVING;
                         response = "OKAY";
                     }
                     break;
                 case GameState.PLAYER2_MOVING:
                     if (Regex.Match(request, @"^PUT,[A-Za-z]+,[1-3],[1-3]$").Success) {
+                        currentPlayer = player1Name;
                         gameState = GameState.PLAYER1_MOVING;
                         response = "OKAY";
                     }
