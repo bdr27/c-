@@ -89,6 +89,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="NameInformationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="NetworkInformationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -97,6 +101,9 @@
   <ItemGroup>
     <Compile Include="MiniCheckersBoard.xaml.cs">
       <DependentUpon>MiniCheckersBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NameInformationWindow.xaml.cs">
+      <DependentUpon>NameInformationWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="NetworkInformationWindow.xaml.cs">
       <DependentUpon>NetworkInformationWindow.xaml</DependentUpon>

@@ -28,7 +28,13 @@ namespace BrendanRusso_MiniCheckers_v1
         public void AddIPAddressMenuItemHandler(RoutedEventHandler handler)
         {
             AddIPAddressMenuItem.Click += handler;
-            Console.Write("I am here");
+            Console.Write("Added IP address");
+        }
+
+        public void NameMenuItemHandler(RoutedEventHandler handler)
+        {
+            setName.Click += handler;
+            Console.WriteLine("Added set name");
         }
     }
 }

@@ -25,6 +25,12 @@ namespace BrendanRusso_MiniCheckers_v1
         public NetworkInformationWindow()
         {
             InitializeComponent();
+            btnOkayIP.Click += btnOkayIP_Click;
+        }
+
+        private void btnOkayIP_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
 
         public string GetIPAddress()
@@ -47,16 +53,9 @@ namespace BrendanRusso_MiniCheckers_v1
         private bool checkValidIPAddress(string iPAddress)
         {
             string[] secIPAddress = iPAddress.Split('.');
-            string pattern = @"^\d+.\d+.\d+.\d$";
+            
             bool validAddress = false;
-            if (Regex.Match(iPAddress, pattern).Success)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            
             if (secIPAddress.Length == 4)
             {
                 validAddress = true;
