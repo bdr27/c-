@@ -50,7 +50,7 @@ namespace BrendanRusso_MiniCheckers_v1
 
         private bool checkValidName(string name)
         {
-            string pattern = @"^[a-zA-Z]$";
+            string pattern = @"^[a-zA-Z]+$";
 
             if (Regex.Match(name, pattern).Success)
             {
