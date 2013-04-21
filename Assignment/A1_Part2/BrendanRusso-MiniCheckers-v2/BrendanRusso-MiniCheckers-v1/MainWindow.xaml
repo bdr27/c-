@@ -6,12 +6,14 @@
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="Game">
-                <MenuItem x:Name="AddIPAddressMenuItem" Header="Set IP Address" />
+                <MenuItem x:Name="IPAddressMenuItem" Header="Set IP Address" />
                 <MenuItem x:Name ="setName" Header="Set Name" IsEnabled="False" />
             </MenuItem>
         </Menu>
-        <TextBlock DockPanel.Dock="Bottom" Name="GameStatus" Text="Status: Waiting for valid IP...">
+        <TextBlock DockPanel.Dock="Bottom" Name="GameStatus">
         </TextBlock>
-        <board:MiniCheckersBoard x:Name="GameBoard"/>
+        <Viewbox MaxHeight="600" MaxWidth="600" MinHeight="200" MinWidth="200">
+            <board:MiniCheckersBoard x:Name="GameBoard"/>
+        </Viewbox>
     </DockPanel>
 </Window>

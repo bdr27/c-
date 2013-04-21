@@ -27,7 +27,7 @@ namespace BrendanRusso_MiniCheckers_v1
 
         public void AddIPAddressMenuItemHandler(RoutedEventHandler handler)
         {
-            AddIPAddressMenuItem.Click += handler;
+            IPAddressMenuItem.Click += handler;
             Console.Write("Added IP address");
         }
 
@@ -35,6 +35,58 @@ namespace BrendanRusso_MiniCheckers_v1
         {
             setName.Click += handler;
             Console.WriteLine("Added set name");
+        }
+
+        public void changeGameState(State state, int playerNumber)
+        {
+            string message = "Status: ";
+            switch(state)
+            {
+                case State.WAIT_VALID_IP:
+                    message += "Waiting for valid IP";
+                    break;
+                case State.WAIT_PLAYER1_NAME:
+                    if (playerNumber == 1)
+                    {
+                        message += "Please enter your name";
+                    }
+                    else
+                    {
+                        message += "Waiting for player1 to enter name";
+                    }
+                    break;
+                case State.WAIT_PLAYER2_NAME:
+                    if (playerNumber == 2)
+                    {
+                        message += "Please enter your name";
+                    }
+                    else
+                    {
+                        message += "Waiting for player2 to enter name";
+                    }
+                    break;
+                case State.PLAYER1_MOVING:
+                    if (playerNumber == 1)
+                    {
+                        message += "Please make your move";
+                    }
+                    else
+                    {
+                        message += "Waiting for player1 to move";
+                    }
+                    break;
+                case State.PLAYER2_MOVING:
+                    if (playerNumber == 2)
+                    {
+                        message += "Please make your move";
+                    }
+                    else
+                    {
+                        message += "Waiting for player2 to move";
+                    }
+                    break;
+            }
+            GameStatus.Text = message;
         }
     }
 }

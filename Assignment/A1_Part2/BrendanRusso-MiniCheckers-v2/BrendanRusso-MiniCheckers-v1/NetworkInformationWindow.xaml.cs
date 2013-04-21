@@ -26,16 +26,17 @@ namespace BrendanRusso_MiniCheckers_v1
         {
             InitializeComponent();
             btnOkayIP.Click += btnOkayIP_Click;
+            slidePort.ValueChanged += slidePort_ValueChanged;
+        }
+
+        private void slidePort_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            lblPort.Text = "port: " + (int)slidePort.Value;
         }
 
         private void btnOkayIP_Click(object sender, RoutedEventArgs e)
         {
             Close();
-        }
-
-        public string GetIPAddress()
-        {
-            return AddressField.Text;
         }
 
         private void AddressField_TextChanged(object sender, TextChangedEventArgs e)
@@ -53,9 +54,9 @@ namespace BrendanRusso_MiniCheckers_v1
         private bool checkValidIPAddress(string iPAddress)
         {
             string[] secIPAddress = iPAddress.Split('.');
-            
+
             bool validAddress = false;
-            
+
             if (secIPAddress.Length == 4)
             {
                 validAddress = true;
@@ -80,7 +81,7 @@ namespace BrendanRusso_MiniCheckers_v1
                         validAddress = false;
                         break;
                     }
-                    
+
                     //Check if it's in range
                     if (section > 255 || section < 0)
                     {
@@ -90,7 +91,7 @@ namespace BrendanRusso_MiniCheckers_v1
                 }
             }
             return validAddress;
-           
+
             //string pattern = @"^2[0-4][0-9]|25[0-5]+$";
             //pattern = @"^\b(?:\d{1,3}\.){3}\d{1,3}\b$";
             // pattern = @"^[0-255]+.[0-255]+.[0-255]+.[0-255]+$";
@@ -100,6 +101,11 @@ namespace BrendanRusso_MiniCheckers_v1
             //    return true;
             //}
             //return false;
+        }
+
+        public string GetIPAddress()
+        {
+            return AddressField.Text;
         }
     }
 }
