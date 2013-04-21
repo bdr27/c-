@@ -26,17 +26,18 @@ namespace BrendanRusso_MiniCheckers_v1
         {
             InitializeComponent();
             btnOkayIP.Click += btnOkayIP_Click;
+            slidePort.ValueChanged += slidePort_ValueChanged;
+        }
+
+        private void slidePort_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            lblPort.Text = "port: " + (int)slidePort.Value;
         }
 
         private void btnOkayIP_Click(object sender, RoutedEventArgs e)
         {
             Close();
-        }
-
-        public string GetIPAddress()
-        {
-            return AddressField.Text;
-        }
+        }       
 
         private void AddressField_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -100,6 +101,11 @@ namespace BrendanRusso_MiniCheckers_v1
             //    return true;
             //}
             //return false;
+        }
+
+        public string GetIPAddress()
+        {
+            return AddressField.Text;
         }
     }
 }

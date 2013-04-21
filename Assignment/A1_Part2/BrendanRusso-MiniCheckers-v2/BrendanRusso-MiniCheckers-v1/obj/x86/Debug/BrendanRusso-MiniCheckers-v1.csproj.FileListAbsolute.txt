@@ -1,0 +1,16 @@
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\V1_Part1\BrendanRusso-MiniCheckers-v1\BrendanRusso-MiniCheckers-v1\bin\x86\Debug\BrendanRusso-MiniCheckers-v1.exe.config
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\V1_Part1\BrendanRusso-MiniCheckers-v1\BrendanRusso-MiniCheckers-v1\bin\x86\Debug\BrendanRusso-MiniCheckers-v1.exe
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\V1_Part1\BrendanRusso-MiniCheckers-v1\BrendanRusso-MiniCheckers-v1\bin\x86\Debug\BrendanRusso-MiniCheckers-v1.pdb
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\V1_Part1\BrendanRusso-MiniCheckers-v1\BrendanRusso-MiniCheckers-v1\obj\x86\Debug\MiniCheckersBoard.baml
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\V1_Part1\BrendanRusso-MiniCheckers-v1\BrendanRusso-MiniCheckers-v1\obj\x86\Debug\MainWindow.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\V1_Part1\BrendanRusso-MiniCheckers-v1\BrendanRusso-MiniCheckers-v1\obj\x86\Debug\MiniCheckersBoard.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\V1_Part1\BrendanRusso-MiniCheckers-v1\BrendanRusso-MiniCheckers-v1\obj\x86\Debug\App.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\V1_Part1\BrendanRusso-MiniCheckers-v1\BrendanRusso-MiniCheckers-v1\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\V1_Part1\BrendanRusso-MiniCheckers-v1\BrendanRusso-MiniCheckers-v1\obj\x86\Debug\BrendanRusso-MiniCheckers-v1_MarkupCompile.cache
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\V1_Part1\BrendanRusso-MiniCheckers-v1\BrendanRusso-MiniCheckers-v1\obj\x86\Debug\BrendanRusso-MiniCheckers-v1_MarkupCompile.lref
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\V1_Part1\BrendanRusso-MiniCheckers-v1\BrendanRusso-MiniCheckers-v1\obj\x86\Debug\MainWindow.baml
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\V1_Part1\BrendanRusso-MiniCheckers-v1\BrendanRusso-MiniCheckers-v1\obj\x86\Debug\BrendanRusso-MiniCheckers-v1.g.resources
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\V1_Part1\BrendanRusso-MiniCheckers-v1\BrendanRusso-MiniCheckers-v1\obj\x86\Debug\BrendanRusso_MiniCheckers_v1.Properties.Resources.resources
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\V1_Part1\BrendanRusso-MiniCheckers-v1\BrendanRusso-MiniCheckers-v1\obj\x86\Debug\BrendanRusso-MiniCheckers-v1.csproj.GenerateResource.Cache
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\V1_Part1\BrendanRusso-MiniCheckers-v1\BrendanRusso-MiniCheckers-v1\obj\x86\Debug\BrendanRusso-MiniCheckers-v1.exe
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\V1_Part1\BrendanRusso-MiniCheckers-v1\BrendanRusso-MiniCheckers-v1\obj\x86\Debug\BrendanRusso-MiniCheckers-v1.pdb
