@@ -11,12 +11,33 @@ namespace BrendanRusso_V1_PartOne
         static void Main(string[] args)
         {
             MessageHandler handler = new MOCKMessageHandler();
-            Console.WriteLine("Get current response (NONE): " + handler.getResponse());
-            string testAddress = "125.4.3.2";
-            int testPortNumber = 50676;
-            handler.connectTo(testAddress, testPortNumber);
-            Console.WriteLine(String.Format("Connect to IP address: {0}, port number: {1} ({2}): {3}", testAddress, testPortNumber, "VALID", handler.getResponse()));
-            Console.WriteLine("Press any key to close...");
+            string menu = "1. Test ConnectTo()\n2. Test SendRequest\n3. (Q)uit";
+            Console.WriteLine(menu);
+            string choice = Console.ReadLine();
+            while (!choice.ToLower().Equals("q"))
+            {
+                switch (choice)
+                {
+                    case "1":
+                        Console.Write("IP Address: ");
+                        string ipAddress = Console.ReadLine();
+                        Console.Write("Port Number: ");
+                        int portNumber = Int32.Parse(Console.ReadLine());
+                        handler.connectTo(ipAddress, portNumber);
+                        break;
+                    case "2":
+                        Console.Write("Request: ");
+                        string request = Console.ReadLine();
+                        handler.sendRequest(request);
+                        break;
+                    default:
+                        Console.WriteLine("Invalid Option");
+                        break;
+                }
+                Console.WriteLine(menu);
+                choice = Console.ReadLine();
+            }
+            Console.WriteLine("Thank you for testing");
             Console.ReadKey();
         }
     }

@@ -115,28 +115,35 @@ namespace BrendanRusso_V1_PartOne_Tests
             MessageHandler handler = new MOCKMessageHandler();
             setup2Players(handler);
 
+            handler.sendRequest("UPDATE");
             //check in right state and the right player is the current player
             Assert.AreEqual(GameState.PLAYER1_MOVING, handler.getGameState());
             Assert.AreEqual("joy", handler.getCurrentPlayerName());
 
-            //Sees if I can update the board for player 1
+            //Sees if I can update the board for and get the response string
             handler.sendRequest("UPDATE");
-            Assert.AreEqual(GameState.PLAYER2_MOVING, handler.getGameState());
-            Assert.AreEqual("N12N14N27|N81N74", handler.getResponse());
-            Assert.AreEqual("smith", handler.getCurrentPlayerName());
-
-            //See if I can update the board for player 2
-            //Sees if I can update the board for player 1
-            handler.sendRequest("UPDATE");
-            Assert.AreEqual(GameState.PLAYER1_MOVING, handler.getGameState());
             Assert.AreEqual("N81N74|N12N14N27", handler.getResponse());
-            Assert.AreEqual("joy", handler.getCurrentPlayerName());
         }
 
         private void setup2Players(MessageHandler handler)
         {
             handler.sendRequest("ID,joy");
             handler.sendRequest("ID,smith");
+        }
+
+        [TestMethod]
+        public void testSendRequestStatus()
+        {
+            MessageHandler handler = new MOCKMessageHandler();
+            setup2Players(handler);
+
+            //check in right state and the right player is the current player
+            Assert.AreEqual(GameState.PLAYER1_MOVING, handler.getGameState());
+            Assert.AreEqual("joy", handler.getCurrentPlayerName());
+
+            //Checks that I can get to the status
+            handler.sendRequest("STATUS");
+            Assert.AreEqual("WAITING", handler.getResponse());
         }
     }
 }

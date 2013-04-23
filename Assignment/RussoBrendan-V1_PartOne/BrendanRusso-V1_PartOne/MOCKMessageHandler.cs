@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -26,49 +27,50 @@ namespace BrendanRusso_V1_PartOne
             {
                 response = "VALID";
             }
+            Debug.WriteLine("response: " + response);
         }
 
         public void sendRequest(string request)
         {
             response = "ERROR";
-            switch (gameState)
+
+            if (Regex.Match(request, @"^UPDATE$").Success)
             {
-                case GameState.WAIT_PLAYER1:
-                    if (Regex.Match(request, @"^ID,[a-zA-Z]+$").Success)
-                    {
-                        response = "PLAYER1";
-                        player1Name = request.Split(',')[1];
-                        gameState = GameState.WAIT_PLAYER2;
-                        
-                    }
-                    break;
-                case GameState.WAIT_PLAYER2:
-                    string tempPlayerName = request.Split(',')[1];
-                    if (Regex.Match(request, @"^ID,[a-zA-Z]+$").Success && !tempPlayerName.Equals(player1Name))
-                    {
-                        response = "PLAYER2";
-                        player2Name = tempPlayerName;                        
-                        currentPlayer = player1Name;
-                        gameState = GameState.PLAYER1_MOVING;
-                    }
-                    break;
-                case GameState.PLAYER1_MOVING:
-                    if (Regex.Match(request, @"UPDATE$").Success)
-                    {
-                        currentPlayer = player2Name;
-                        gameState = GameState.PLAYER2_MOVING;
-                        request = "N12N14N27|N81N74";
-                    }
-                    break;
-                case GameState.PLAYER2_MOVING:
-                    if (Regex.Match(request, @"UPDATE$").Success)
-                    {
-                        currentPlayer = player1Name;
-                        gameState = GameState.PLAYER1_MOVING;
-                        request = "N81N74|N12N14N27";
-                    }
-                    break;
+                response = "N81N74|N12N14N27";
             }
+            else if (Regex.Match(request, @"STATUS$").Success)
+            {
+                response = "WAITING";
+            }
+            else
+            {
+                switch (gameState)
+                {
+                    case GameState.WAIT_PLAYER1:
+                        if (Regex.Match(request, @"^ID,[a-zA-Z]+$").Success)
+                        {
+                            response = "PLAYER1";
+                            player1Name = request.Split(',')[1];
+                            gameState = GameState.WAIT_PLAYER2;
+                            Debug.WriteLine("Player 1 Name: " + player1Name);
+                        }
+                        break;
+                    case GameState.WAIT_PLAYER2:
+                        string tempPlayerName = request.Split(',')[1];
+                        if (Regex.Match(request, @"^ID,[a-zA-Z]+$").Success && !tempPlayerName.Equals(player1Name))
+                        {
+                            response = "PLAYER2";
+                            player2Name = tempPlayerName;
+                            currentPlayer = player1Name;
+                            gameState = GameState.PLAYER1_MOVING;
+                            Debug.WriteLine("Player 2 Name: " + player2Name);
+                            Debug.WriteLine("Current Player Name: " + currentPlayer);
+                        }
+                        break;
+                }
+                Debug.WriteLine("GameState: " + gameState.ToString());
+            }
+            Debug.WriteLine("response: " + response);
         }
 
         public string getResponse()
