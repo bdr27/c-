@@ -1,0 +1,7 @@
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\RussoBrendan-V1_PartOne\BrendanRusso-V1_PartOne-Tests\bin\Debug\BrendanRusso-V1_PartOne-Tests.dll
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\RussoBrendan-V1_PartOne\BrendanRusso-V1_PartOne-Tests\bin\Debug\BrendanRusso-V1_PartOne-Tests.pdb
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\RussoBrendan-V1_PartOne\BrendanRusso-V1_PartOne-Tests\bin\Debug\BrendanRusso-V1_PartOne.exe
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\RussoBrendan-V1_PartOne\BrendanRusso-V1_PartOne-Tests\bin\Debug\BrendanRusso-V1_PartOne.pdb
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\RussoBrendan-V1_PartOne\BrendanRusso-V1_PartOne-Tests\obj\Debug\BrendanRusso-V1_PartOne-Tests.csprojResolveAssemblyReference.cache
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\RussoBrendan-V1_PartOne\BrendanRusso-V1_PartOne-Tests\obj\Debug\BrendanRusso-V1_PartOne-Tests.dll
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\RussoBrendan-V1_PartOne\BrendanRusso-V1_PartOne-Tests\obj\Debug\BrendanRusso-V1_PartOne-Tests.pdb
