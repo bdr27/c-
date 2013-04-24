@@ -44,10 +44,6 @@ namespace BrendanRusso_V2_PartOne
             {
                 response = "WAITING";
             }
-            else if(Regex.Match(request, @"^TRY,[a-zA-Z]+,N[1-8][1-8],N[1-8][1-8]$").Success)
-            {
-                response = "DONE";
-            }
             else
             {
                 switch (gameState)
@@ -68,15 +64,70 @@ namespace BrendanRusso_V2_PartOne
                             response = "PLAYER2";
                             player2Name = tempPlayerName;
                             currentPlayer = player1Name;
+                            board.setupStartingLocations();
                             gameState = GameState.PLAYER1_MOVING;
                             Debug.WriteLine("Player 2 Name: " + player2Name);
                             Debug.WriteLine("Current Player Name: " + currentPlayer);
+                        }
+                        break;
+                    case GameState.PLAYER1_MOVING:
+                        Debug.WriteLine("Player 1 is moving");
+                        if (checkValidMove(GameState.PLAYER1_MOVING, player1Name, request))
+                        {
+                            response = "DONE";
+                        }
+                        break;
+                    case GameState.PLAYER2_MOVING:
+                        Debug.WriteLine("Player 2 is moving");
+                        if (checkValidMove(GameState.PLAYER2_MOVING, player2Name, request))
+                        {
+                            response = "DONE";
                         }
                         break;
                 }
                 Debug.WriteLine("GameState: " + gameState.ToString());
             }
             Debug.WriteLine("response: " + response);
+        }
+
+        private bool checkValidMove(GameState state, string playerName, string request)
+        {
+            bool validMove = false;
+            if (Regex.Match(request, @"^TRY,[a-zA-Z]+,N[1-8][1-8],N[1-8][1-8]$").Success)
+            {
+                //Puts into string for easier use later
+                string[] playerTryMove = request.Split(',');
+                currentPlayer = playerTryMove[1];
+
+                //Checks for correct state
+                if (state.Equals(GameState.PLAYER1_MOVING))
+                {
+                    //Checks for right name
+                    if (currentPlayer.Equals(player1Name))
+                    {
+                        //Checks if move is valid
+                        if (board.ValidMove(playerTryMove, Piece.PLAYER1))
+                        {
+                            gameState = GameState.PLAYER2_MOVING;
+                            validMove = true;
+                        }
+                    }
+                }
+                else if (state.Equals(GameState.PLAYER2_MOVING))
+                {
+                    //Checks for right name
+                    if (currentPlayer.Equals(player2Name))
+                    {
+                        //Checks if move is valid
+                        if (board.ValidMove(playerTryMove, Piece.PLAYER2))
+                        {
+                            gameState = GameState.PLAYER1_MOVING;
+                            validMove = true;
+                        }
+                    }
+                }
+            }
+            return validMove;
         }
 
         public string getResponse()

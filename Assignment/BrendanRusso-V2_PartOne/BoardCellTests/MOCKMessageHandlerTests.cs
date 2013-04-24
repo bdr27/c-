@@ -12,9 +12,22 @@ namespace BoardCellTests
         {
             MessageHandler hander = new MOCKMessageHandler();
 
-            //Send valid name
-            hander.sendRequest("TRY,someone,N12,N34");
+            //Need to get to the right state first
+            hander.connectTo("126.5.6.7",50000);
+            hander.sendRequest("ID,someone");
+            hander.sendRequest("ID,bob");
+            
+            //Board is not set up yet
+            hander.sendRequest("TRY,someone,N32,N43");
             Assert.AreEqual("DONE", hander.getResponse());
+
+            //Send valid name
+            hander.sendRequest("TRY,bob,N61,N52");
+            Assert.AreEqual("DONE", hander.getResponse());
+
+            //Move to invalid location
+            hander.sendRequest("TRY,someone,N43,N53");
+            Assert.AreEqual("ERROR", hander.getResponse());
 
             //Send invalid name
             hander.sendRequest("TRY,j0hn,N12,N34");

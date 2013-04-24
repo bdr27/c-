@@ -53,13 +53,13 @@ namespace BrendanRusso_V2_PartOne
                 if (row < BOARD_HEIGHT - 1 && col > 0)
                 {
                     cells[row, col].bottomLeft = cells[row + 1, col - 1];
-                    Debug.WriteLine("\tTop Right: " + cells[row, col].bottomLeft.ToString());
+                    Debug.WriteLine("\tBottom Left: " + cells[row, col].bottomLeft.ToString());
                 }
                 //Checks for top right
                 if (row > 0 && col < BOARD_WIDTH - 1)
                 {
                     cells[row, col].topRight = cells[row - 1, col + 1];
-                    Debug.WriteLine("\tBottom Left: " + cells[row, col].topRight.ToString());
+                    Debug.WriteLine("\tTop Right: " + cells[row, col].topRight.ToString());
                 }
                 //Checks for bottom right
                 if (row < BOARD_HEIGHT - 1 && col < BOARD_WIDTH - 1)
@@ -102,8 +102,65 @@ namespace BrendanRusso_V2_PartOne
             setupPlayerLocations(BOARD_HEIGHT - 3, BOARD_HEIGHT, Piece.PLAYER2);
         }
 
-        public void updateCell()
+        public bool ValidMove(string[] playerTryMove, Piece playerPiece)
         {
+            bool validMove = false;
+            string startLocation = playerTryMove[2];
+            string endLocation = playerTryMove[3];
+            //Take 1 from all because array's start at 0
+            int startRow = Int32.Parse(playerTryMove[2][1].ToString()) - 1;
+            int startCol = Int32.Parse(playerTryMove[2][2].ToString()) - 1;
+            int endRow = Int32.Parse(playerTryMove[3][1].ToString()) - 1;
+            int endCol = Int32.Parse(playerTryMove[3][2].ToString()) - 1;
+
+            if (cells[startRow, startCol].getPiece().Equals(playerPiece) && cells[endRow, endCol].getPiece().Equals(Piece.EMPTY))
+            {
+                //Check if cell is movable to
+                if(moveableCell(cells[startRow, startCol],cells[endRow, endCol]))
+                {
+                    cells[startRow, startCol].piece = Piece.EMPTY;
+                    cells[endRow, endCol].piece = playerPiece;
+                    validMove = true;
+                }
+            }
+
+            Debug.WriteLine("start location: " + startLocation);
+            Debug.WriteLine("end location: " + endLocation);
+            Debug.WriteLine("start row: " + startRow);
+            Debug.WriteLine("start col: " + startCol);
+            Debug.WriteLine("end row: " + endRow);
+            Debug.WriteLine("end col: " + endCol);
+            
+            //Check if it the users
+            return validMove;
+
+        }
+        
+
+        private bool moveableCell(Cell start, Cell end)
+        {
+            List<Cell> movableLocations = new List<Cell>();
+            movableLocations.Add(start.bottomLeft);
+            movableLocations.Add(start.bottomRight);
+            movableLocations.Add(start.topRight);
+            movableLocations.Add(start.topLeft);
+
+            foreach (Cell cell in movableLocations)
+            {
+                try
+                {
+                    if (cell.Equals(end))
+                    {
+                        return true;
+                    }
+                }
+                catch (NullReferenceException)
+                {
+                    Debug.WriteLine("Out of range");
+                }
+            }            
+            return false;
+
         }
 
         private void setupPlayerLocations(int startRow, int endRow, Piece playerPiece)
@@ -134,6 +191,6 @@ namespace BrendanRusso_V2_PartOne
                     }
                 }
             }
-        }
+        }        
     }
 }
