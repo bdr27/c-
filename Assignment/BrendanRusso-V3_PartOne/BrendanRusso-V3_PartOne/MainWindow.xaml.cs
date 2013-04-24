@@ -38,11 +38,6 @@ namespace BrendanRusso_V3_PartOne
             Console.WriteLine("Added set name");
         }
 
-        public void updateDisplay(List<int> player1Pieces, List<int> player2Pieces)
-        {
-            GameBoard.updateView(player1Pieces, player2Pieces);
-        }
-
         public void setStatusWaitingForConnection()
         {
             GameStatus.Text = "Status: Waiting for connection...";

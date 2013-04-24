@@ -25,12 +25,32 @@ namespace BrendanRusso_V3_PartOne
         {
             InitializeComponent();
         }
+        public void resetView()
+        {
+            for (int i = 64; i < 128; i++)
+            {
+                Ellipse ellipse = (Ellipse)CheckerBoard.Children[i];
+                ellipse.Fill = null;
+            }
+        }
 
         public void updateView(List<int> player1Pieces, List<int> player2Pieces)
         {
             drawElipses(player1Pieces, Colors.Navy);
             drawElipses(player2Pieces, Colors.Fuchsia); 
         }
+        public void AddMouseHandler(MouseButtonEventHandler handler)
+        {
+            MouseDown += handler;
+        }
+
+        public void GetGridPosition(Point point, out int row, out int col)
+        {
+            UIElement element = (UIElement)InputHitTest(point);
+            row = Grid.GetRow(element) + 1;
+            col = Grid.GetColumn(element) + 1; // make these start from 1
+        }
+
 
         private void drawElipses(List<int> playerPieces, Color color)
         {
