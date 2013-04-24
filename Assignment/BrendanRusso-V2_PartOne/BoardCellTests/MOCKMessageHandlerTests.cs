@@ -10,28 +10,40 @@ namespace BoardCellTests
         [TestMethod]
         public void TestTryMethod()
         {
-            MessageHandler hander = new MOCKMessageHandler();
+            MessageHandler handler = new MOCKMessageHandler();
 
             //Need to get to the right state first
-            hander.connectTo("126.5.6.7",50000);
-            hander.sendRequest("ID,someone");
-            hander.sendRequest("ID,bob");
+            handler.connectTo("126.5.6.7",50000);
+            handler.sendRequest("ID,someone");
+            handler.sendRequest("ID,bob");
+
+            //Send bad info
+            handler.sendRequest("TRY,pap");
+            Assert.AreEqual("ERROR", handler.getResponse());
             
             //Board is not set up yet
-            hander.sendRequest("TRY,someone,N32,N43");
-            Assert.AreEqual("DONE", hander.getResponse());
+            handler.sendRequest("TRY,someone,N32,N43");
+            Assert.AreEqual("DONE", handler.getResponse());
 
             //Send valid name
-            hander.sendRequest("TRY,bob,N61,N52");
-            Assert.AreEqual("DONE", hander.getResponse());
+            handler.sendRequest("TRY,bob,N61,N52");
+            Assert.AreEqual("DONE", handler.getResponse());
 
             //Move to invalid location
-            hander.sendRequest("TRY,someone,N43,N53");
-            Assert.AreEqual("ERROR", hander.getResponse());
+            handler.sendRequest("TRY,someone,N43,N53");
+            Assert.AreEqual("ERROR", handler.getResponse());
 
             //Send invalid name
-            hander.sendRequest("TRY,j0hn,N12,N34");
-            Assert.AreEqual("ERROR", hander.getResponse());
+            handler.sendRequest("TRY,j0hn,N12,N34");
+            Assert.AreEqual("ERROR", handler.getResponse());
+
+            //Send invalid location
+            handler.sendRequest("TRY,someone,N61,N52");
+            Assert.AreEqual("ERROR", handler.getResponse());
+
+            //Point to a random location
+            handler.sendRequest("TRY,someone,N44,N33");
+            Assert.AreEqual("ERROR", handler.getResponse());
         }
     }
 }
