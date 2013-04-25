@@ -23,10 +23,10 @@ namespace TicTacToeClient
         public MainWindow()
         {
             InitializeComponent();
-            //GameBoard.ShowPiece(0, true);
-            //GameBoard.SetPieceColor(0, Brushes.White);
-            //GameBoard.ShowPiece(5, true);
-            //GameBoard.SetPieceColor(5, Brushes.Black);
+            GameBoard.ShowPiece(0, true);
+            GameBoard.SetPieceColor(0, Brushes.White);
+            GameBoard.ShowPiece(5, true);
+            GameBoard.SetPieceColor(5, Brushes.Black);
         }
 
         public void AddIPAddressMenuItemHandler(RoutedEventHandler handler)
