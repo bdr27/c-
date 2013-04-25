@@ -42,6 +42,7 @@ namespace BrendanRusso_V3_PartOne
         public void AddMouseHandler(MouseButtonEventHandler handler)
         {
             MouseDown += handler;
+            MouseUp += handler;
         }
 
         public void GetGridPosition(Point point, out int row, out int col)

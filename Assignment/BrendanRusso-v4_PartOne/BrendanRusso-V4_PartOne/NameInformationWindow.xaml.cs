@@ -58,5 +58,11 @@ namespace BrendanRusso_V3_PartOne
             }
             return false;
         }
+
+        private void btnCancelName_Click(object sender, RoutedEventArgs e)
+        {
+            NameField.Text = "";
+            Close();
+        }
     }
 }

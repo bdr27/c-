@@ -7,9 +7,14 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <TextBlock HorizontalAlignment="Left" Margin="10,13,0,0" TextWrapping="Wrap" Text="Name:" VerticalAlignment="Top"/>
-        <TextBox Name="NameField" HorizontalAlignment="Left" Height="23" Margin="73,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210" TextChanged="NameField_TextChanged"/>
+        <TextBox Name="NameField" HorizontalAlignment="Left" Height="23" Margin="73,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210" TextChanged="NameField_TextChanged" Grid.ColumnSpan="2"/>
 
-        <Button Name="btnOkayName" IsEnabled="False" Height="22" Width="75" Content="Okay" Grid.Row="1"/>
+        <Button Name="btnOkayName" IsEnabled="False" Height="22" Width="75" Content="Okay" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right"/>
+        <Button Name="btnCancelName" Height="22" Width="75" Content="Cancel" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Click="btnCancelName_Click"/>
     </Grid>
 </Window>

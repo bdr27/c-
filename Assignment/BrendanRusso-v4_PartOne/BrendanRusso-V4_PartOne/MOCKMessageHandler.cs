@@ -11,12 +11,13 @@ namespace BrendanRusso_V3_PartOne
     public class MOCKMessageHandler : MessageHandler
     {
         private GameState gameState;
-        private string response, player1Name, player2Name, currentPlayer;
+        private string response, player1Name, player2Name, currentPlayer, status;
         private Board board;
 
         public MOCKMessageHandler()
         {
             response = "NONE";
+            status = "WAITING";
             gameState = GameState.WAIT_PLAYER1;
             board = new Board();
         }
@@ -42,7 +43,7 @@ namespace BrendanRusso_V3_PartOne
             }
             else if (Regex.Match(request, @"^STATUS$").Success)
             {
-                response = "WAITING";
+                response = status;
             }
             else
             {
@@ -88,6 +89,11 @@ namespace BrendanRusso_V3_PartOne
                 Debug.WriteLine("GameState: " + gameState.ToString());
             }
             Debug.WriteLine("response: " + response);
+        }
+
+        public void setStatus(string status)
+        {
+            this.status = status;
         }
 
         private bool checkValidMove(GameState state, string playerName, string request)

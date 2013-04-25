@@ -4,8 +4,10 @@ using System.Configuration;
 using System.Data;
 using System.Diagnostics;
 using System.Linq;
-using System.Threading.Tasks;
+using System.Threading;
+using System.Timers;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace BrendanRusso_V3_PartOne
 {
@@ -16,10 +18,11 @@ namespace BrendanRusso_V3_PartOne
     {
         private MainWindow player1Window;
         private MainWindow player2Window;
+        private MessageHandler handler;
+        private Thread thread;
         private string networkIPAddress;
         private int portNumber;
-        private MessageHandler handler;
-        private GameState state;
+
         private string player1Name;
         private string player2Name;
         private bool pieceSelectedPlayer1 = false;
@@ -31,23 +34,51 @@ namespace BrendanRusso_V3_PartOne
             : base()
         {
             player1Window = new MainWindow();
-            player1Window.Show();
             player2Window = new MainWindow();
             player2Window.IPAddressMenuItem.IsEnabled = false;
             player1Window.Show();
             player2Window.Show();
 
+            setupThread();
             handler = new MOCKMessageHandler();
 
             //wire the handlers
             wireHandlers(player1Window);
             wireHandlers(player2Window);
             player1Window.GameBoard.AddMouseHandler(HandleMouseEventForPlayer1);
-            player2Window.GameBoard.AddMouseHandler(HandleMouseEventForPlayer2); 
+            player2Window.GameBoard.AddMouseHandler(HandleMouseEventForPlayer2);
 
             player1Window.NameMenuItemHandler(HandleNameMenuItemPlayer1);
             player2Window.NameMenuItemHandler(HandleNameMenuItemPlayer2);
-                       
+
+        }
+
+        private void setupThread()
+        {
+            thread = new Thread(new ThreadStart(DisplayThread));
+        }
+
+        void DisplayThread()
+        {
+            while (true)
+            {
+                handler.sendRequest("UPDATE");
+                Debug.WriteLine(handler.getResponse());
+
+                handler.sendRequest("STATUS");
+                Debug.WriteLine("Status: " + handler.getResponse());
+
+                Thread.Sleep(1000);
+            }
+        }
+
+        private void timer_Elapsed(object sender, ElapsedEventArgs e)
+        {
+            handler.sendRequest("UPDATE");
+            drawBoard(handler.getResponse());
+
+            handler.sendRequest("STATUS");
+            Debug.WriteLine("Status: " + handler.getResponse());
         }
 
         private void wireHandlers(MainWindow playerWindow)
@@ -63,14 +94,13 @@ namespace BrendanRusso_V3_PartOne
             networkIPAddress = dialog.GetIPAddress();
             portNumber = dialog.getPortNumber();
             handler.connectTo(networkIPAddress, portNumber);
-            if(handler.getResponse().Equals("VALID"))
+            if (handler.getResponse().Equals("VALID"))
             {
                 player1Window.IPAddressMenuItem.IsEnabled = false;
                 player1Window.setName.IsEnabled = true;
-                state = GameState.WAIT_PLAYER1;
                 player1Window.setStatusEnterYourName();
                 player2Window.setStatusOpponmentName();
-            }            
+            }
         }
 
         private void HandleNameMenuItemPlayer1(object sender, RoutedEventArgs e)
@@ -82,17 +112,16 @@ namespace BrendanRusso_V3_PartOne
             handler.sendRequest(String.Format("ID,{0}", player1Name));
             if (handler.getResponse().Equals("PLAYER1"))
             {
-
                 player1Window.setName.IsEnabled = false;
                 player2Window.setName.IsEnabled = true;
                 player2Window.setStatusEnterYourName();
                 player1Window.setStatusOpponmentName();
             }
-            else
+            else if (!player1Name.Equals(""))
             {
                 player1Window.setStatusInvalidName();
             }
-            
+
         }
         private void HandleNameMenuItemPlayer2(object sender, RoutedEventArgs e)
         {
@@ -106,20 +135,23 @@ namespace BrendanRusso_V3_PartOne
                 player2Window.setName.IsEnabled = false;
                 player1Window.setStatusYourMove();
                 player2Window.setStatusOpponentsMove();
-                drawBoard();
+                handler.sendRequest("UPDATE");
+                string boardPieces = handler.getResponse();
+                drawBoard(boardPieces);
+
+                thread.Start();
             }
-            else
+            else if (!player2Name.Equals(""))
             {
                 player2Window.setStatusInvalidName();
-            }            
+            }
         }
-        private void drawBoard()
+        private void drawBoard(string response)
         {
-            handler.sendRequest("UPDATE");
-            string[] playerPieces = handler.getResponse().Split('|');
+            string[] playerPieces = response.Split('|');
             List<int> player1Pieces = getListPlayerPieces(playerPieces[0]);
             List<int> player2Pieces = getListPlayerPieces(playerPieces[1]);
-            
+
             Debug.WriteLine(playerPieces);
             player1Window.GameBoard.resetView();
             player2Window.GameBoard.resetView();
@@ -144,10 +176,11 @@ namespace BrendanRusso_V3_PartOne
         private void HandleMouseEventForPlayer1(object sender,
             System.Windows.Input.MouseButtonEventArgs e)
         {
+            handler.setStatus("MOVING");
+            Debug.Write(e.ToString());
             MiniCheckersBoard board = (MiniCheckersBoard)sender;
             IInputElement element = board.InputHitTest(e.GetPosition(board));
             Point point = e.GetPosition(board);
-            //board.HitTest(point);
             int row, col;
             board.GetGridPosition(point, out row, out col);
             if (pieceSelectedPlayer1 == true)
@@ -155,12 +188,21 @@ namespace BrendanRusso_V3_PartOne
                 pieceSelectedPlayer1 = false;
                 player1NewCol = col;
                 player1NewRow = row;
-                handler.sendRequest(string.Format("TRY,{0},N{1}{2},N{3}{4}", player1Name, player1OldRow, player1OldCol, player1NewRow, player1NewCol));
-                string response = handler.getResponse();
-                if(response.Equals("DONE"))
+                //Makes sure player 1 can only go down
+                if (player1OldRow < player1NewRow)
                 {
-                    drawBoard();
+                    handler.sendRequest(string.Format("TRY,{0},N{1}{2},N{3}{4}", player1Name, player1OldRow, player1OldCol, player1NewRow, player1NewCol));
+                    string response = handler.getResponse();
+                    if (response.Equals("DONE"))
+                    {
+                        handler.sendRequest("UPDATE");
+                        string boardPieces = handler.getResponse();
+                        drawBoard(boardPieces);
+                        player2Window.setStatusYourMove();
+                        player1Window.setStatusOpponentsMove();
+                    }
                 }
+                handler.setStatus("WAITING");
             }
             else
             {
@@ -174,10 +216,10 @@ namespace BrendanRusso_V3_PartOne
         private void HandleMouseEventForPlayer2(object sender,
             System.Windows.Input.MouseButtonEventArgs e)
         {
+            handler.setStatus("MOVING");
             MiniCheckersBoard board = (MiniCheckersBoard)sender;
             IInputElement element = board.InputHitTest(e.GetPosition(board));
             Point point = e.GetPosition(board);
-            //board.HitTest(point);
             int row, col;
             board.GetGridPosition(point, out row, out col);
             if (pieceSelectedPlayer2 == true)
@@ -185,12 +227,21 @@ namespace BrendanRusso_V3_PartOne
                 pieceSelectedPlayer2 = false;
                 player2NewCol = col;
                 player2NewRow = row;
-                handler.sendRequest(string.Format("TRY,{0},N{1}{2},N{3}{4}", player2Name, player2OldRow, player2OldCol, player2NewRow, player2NewCol));
-                string response = handler.getResponse();
-                if(response.Equals("DONE"))
+                if (player2OldRow > player2NewRow)
                 {
-                    drawBoard();
+                    handler.sendRequest(string.Format("TRY,{0},N{1}{2},N{3}{4}", player2Name, player2OldRow, player2OldCol, player2NewRow, player2NewCol));
+                    string response = handler.getResponse();
+                    if (response.Equals("DONE"))
+                    {
+                        handler.sendRequest("UPDATE");
+                        string boardPieces = handler.getResponse();
+                        drawBoard(boardPieces);
+
+                        player1Window.setStatusYourMove();
+                        player2Window.setStatusOpponentsMove();
+                    }
                 }
+                handler.setStatus("WAITING");
             }
             else
             {
@@ -200,5 +251,5 @@ namespace BrendanRusso_V3_PartOne
             }
             Debug.WriteLine("row: " + row + "col: " + col);
         }
-        }
     }
+}

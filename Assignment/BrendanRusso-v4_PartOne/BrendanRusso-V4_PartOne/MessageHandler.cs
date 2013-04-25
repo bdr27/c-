@@ -21,5 +21,7 @@ namespace BrendanRusso_V3_PartOne
         string getPlayer2Name();
 
         string getCurrentPlayerName();
+
+        void setStatus(string status);
     }
 }
