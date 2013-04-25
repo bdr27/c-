@@ -19,3 +19,5 @@ E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\BrendanRusso-v4_Part
 E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\BrendanRusso-v4_PartOne\BrendanRusso-V4_PartOne\obj\Debug\BrendanRusso-V3_PartOne.exe
 E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\BrendanRusso-v4_PartOne\BrendanRusso-V4_PartOne\obj\Debug\BrendanRusso-V3_PartOne.pdb
 E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\BrendanRusso-v4_PartOne\BrendanRusso-V4_PartOne\obj\Debug\BrendanRusso-V4_PartOne.csprojResolveAssemblyReference.cache
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\BrendanRusso-v4_PartOne\BrendanRusso-V4_PartOne\obj\Debug\SameNameErrorBox.baml
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\BrendanRusso-v4_PartOne\BrendanRusso-V4_PartOne\obj\Debug\SameNameErrorBox.g.cs

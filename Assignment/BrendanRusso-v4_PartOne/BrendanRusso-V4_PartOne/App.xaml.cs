@@ -19,6 +19,7 @@ namespace BrendanRusso_V3_PartOne
         private MainWindow player1Window;
         private MainWindow player2Window;
         private MessageHandler handler;
+        private SameNameErrorBox sameNameErrorBox;
         private Thread thread;
         private string networkIPAddress;
         private int portNumber;
@@ -36,6 +37,8 @@ namespace BrendanRusso_V3_PartOne
             player1Window = new MainWindow();
             player2Window = new MainWindow();
             player2Window.IPAddressMenuItem.IsEnabled = false;
+            player1Window.Title = "Brendan Russo - MiniCheckers v4 - Navy";
+            player2Window.Title = "Brendan Russo - MiniCheckers v4 - Fuschia";
             player1Window.Show();
             player2Window.Show();
 
@@ -119,6 +122,10 @@ namespace BrendanRusso_V3_PartOne
             }
             else if (!player1Name.Equals(""))
             {
+                if (player1Name.Equals(player2Name))
+                {
+                    MessageBox.Show("Error names can not be the same");
+                }
                 player1Window.setStatusInvalidName();
             }
 
@@ -143,8 +150,20 @@ namespace BrendanRusso_V3_PartOne
             }
             else if (!player2Name.Equals(""))
             {
+                if (player1Name.Equals(player2Name))
+                {
+                    displaySameNameError();
+                    
+                }
                 player2Window.setStatusInvalidName();
             }
+        }
+
+        private void displaySameNameError()
+        {
+            sameNameErrorBox = new SameNameErrorBox();
+            sameNameErrorBox.Owner = player2Window;
+            sameNameErrorBox.Show();
         }
         private void drawBoard(string response)
         {
