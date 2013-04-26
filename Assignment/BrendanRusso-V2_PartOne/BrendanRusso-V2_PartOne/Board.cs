@@ -11,7 +11,7 @@ namespace BrendanRusso_V2_PartOne
     {
         private const int BOARD_HEIGHT = 8;
         private const int BOARD_WIDTH = 8;
-        Cell[,] cells;
+        private Cell[,] cells;
 
         public Board()
         {
@@ -33,41 +33,6 @@ namespace BrendanRusso_V2_PartOne
             }
             setupMoveLocations();
            
-        }
-        private void setupMoveLocations()
-        {
-            //Sets up empty cells for now
-            foreach (Cell cell in cells)
-            {
-                int row = cell.row;
-                int col = cell.col;
-
-                Debug.WriteLine(cells[row, col].ToString());
-                //Checks for top left
-                if (row > 0 && col > 0)
-                {
-                    cells[row, col].topLeft = cells[row - 1, col - 1];
-                    Debug.WriteLine("\tTop Left: " + cells[row, col].topLeft.ToString());
-                }
-                //Checks for bottom left
-                if (row < BOARD_HEIGHT - 1 && col > 0)
-                {
-                    cells[row, col].bottomLeft = cells[row + 1, col - 1];
-                    Debug.WriteLine("\tBottom Left: " + cells[row, col].bottomLeft.ToString());
-                }
-                //Checks for top right
-                if (row > 0 && col < BOARD_WIDTH - 1)
-                {
-                    cells[row, col].topRight = cells[row - 1, col + 1];
-                    Debug.WriteLine("\tTop Right: " + cells[row, col].topRight.ToString());
-                }
-                //Checks for bottom right
-                if (row < BOARD_HEIGHT - 1 && col < BOARD_WIDTH - 1)
-                {
-                    cells[row, col].bottomRight = cells[row + 1, col + 1];
-                    Debug.WriteLine("\tBottom Right: " + cells[row, col].bottomRight.ToString());
-                }               
-            }
         }
 
         public string getPlayerPieces()
@@ -116,7 +81,7 @@ namespace BrendanRusso_V2_PartOne
             if (cells[startRow, startCol].getPiece().Equals(playerPiece) && cells[endRow, endCol].getPiece().Equals(Piece.EMPTY))
             {
                 //Check if cell is movable to
-                if(moveableCell(cells[startRow, startCol],cells[endRow, endCol]))
+                if (moveableCell(cells[startRow, startCol], cells[endRow, endCol]))
                 {
                     cells[startRow, startCol].piece = Piece.EMPTY;
                     cells[endRow, endCol].piece = playerPiece;
@@ -130,12 +95,47 @@ namespace BrendanRusso_V2_PartOne
             Debug.WriteLine("start col: " + startCol);
             Debug.WriteLine("end row: " + endRow);
             Debug.WriteLine("end col: " + endCol);
-            
+
             //Check if it the users
             return validMove;
 
         }
-        
+
+        private void setupMoveLocations()
+        {
+            //Sets up empty cells for now
+            foreach (Cell cell in cells)
+            {
+                int row = cell.row;
+                int col = cell.col;
+
+                Debug.WriteLine(cells[row, col].ToString());
+                //Checks for top left
+                if (row > 0 && col > 0)
+                {
+                    cells[row, col].topLeft = cells[row - 1, col - 1];
+                    Debug.WriteLine("\tTop Left: " + cells[row, col].topLeft.ToString());
+                }
+                //Checks for bottom left
+                if (row < BOARD_HEIGHT - 1 && col > 0)
+                {
+                    cells[row, col].bottomLeft = cells[row + 1, col - 1];
+                    Debug.WriteLine("\tBottom Left: " + cells[row, col].bottomLeft.ToString());
+                }
+                //Checks for top right
+                if (row > 0 && col < BOARD_WIDTH - 1)
+                {
+                    cells[row, col].topRight = cells[row - 1, col + 1];
+                    Debug.WriteLine("\tTop Right: " + cells[row, col].topRight.ToString());
+                }
+                //Checks for bottom right
+                if (row < BOARD_HEIGHT - 1 && col < BOARD_WIDTH - 1)
+                {
+                    cells[row, col].bottomRight = cells[row + 1, col + 1];
+                    Debug.WriteLine("\tBottom Right: " + cells[row, col].bottomRight.ToString());
+                }               
+            }
+        }       
 
         private bool moveableCell(Cell start, Cell end)
         {
