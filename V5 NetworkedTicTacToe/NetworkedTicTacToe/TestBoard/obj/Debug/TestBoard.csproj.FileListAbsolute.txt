@@ -1,0 +1,8 @@
+C:\Users\jase\Desktop\NetworkedTicTacToe\TestBoard\bin\Debug\TestBoard.exe.config
+C:\Users\jase\Desktop\NetworkedTicTacToe\TestBoard\bin\Debug\TestBoard.exe
+C:\Users\jase\Desktop\NetworkedTicTacToe\TestBoard\bin\Debug\TestBoard.pdb
+C:\Users\jase\Desktop\NetworkedTicTacToe\TestBoard\bin\Debug\TicTacToeClient.exe
+C:\Users\jase\Desktop\NetworkedTicTacToe\TestBoard\bin\Debug\TicTacToeClient.pdb
+C:\Users\jase\Desktop\NetworkedTicTacToe\TestBoard\obj\Debug\TestBoard.csprojResolveAssemblyReference.cache
+C:\Users\jase\Desktop\NetworkedTicTacToe\TestBoard\obj\Debug\TestBoard.exe
+C:\Users\jase\Desktop\NetworkedTicTacToe\TestBoard\obj\Debug\TestBoard.pdb

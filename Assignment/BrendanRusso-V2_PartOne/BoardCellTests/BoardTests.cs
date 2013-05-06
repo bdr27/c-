@@ -30,5 +30,6 @@ namespace BoardCellTests
             board.setupStartingLocations();
             Assert.AreEqual("N12N14N16N18N21N23N25N27N32N34N36N38|N61N63N65N67N72N74N76N78N81N83N85N87", board.getPlayerPieces());
         }
+
     }
 }

@@ -1,0 +1,6 @@
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\BrendanRusso-V2_PartOne\BrendanRusso-V2_PartOne\bin\Debug\BrendanRusso-V2_PartOne.exe.config
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\BrendanRusso-V2_PartOne\BrendanRusso-V2_PartOne\bin\Debug\BrendanRusso-V2_PartOne.exe
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\BrendanRusso-V2_PartOne\BrendanRusso-V2_PartOne\bin\Debug\BrendanRusso-V2_PartOne.pdb
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\BrendanRusso-V2_PartOne\BrendanRusso-V2_PartOne\obj\Debug\BrendanRusso-V2_PartOne.csprojResolveAssemblyReference.cache
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\BrendanRusso-V2_PartOne\BrendanRusso-V2_PartOne\obj\Debug\BrendanRusso-V2_PartOne.exe
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment\BrendanRusso-V2_PartOne\BrendanRusso-V2_PartOne\obj\Debug\BrendanRusso-V2_PartOne.pdb
