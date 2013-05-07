@@ -155,7 +155,7 @@ namespace Viewer
             setupRows((long)Slider.Value * lineSize);
         }
 
-        private void AddColumns(List<string> headers)
+        public void AddColumns(List<string> headers)
         {
             foreach (var header in headers)
             {

@@ -31,5 +31,33 @@ namespace Viewer
         {
             fileStream.Close();
         }
+
+        private void setupRows(long offset)
+        {
+            if (fileStream == null) return;
+            ListView.Items.Clear();
+            var buffer = new byte[lineSize];
+            fileStream.Seek(offset, 0);
+
+            for (var i = 0; i < (int)(ListView.ActualHeight / (ListView.FontSize + 10)); ++i)
+            {
+                fileStream.Read(buffer, 0, lineSize);
+                var line = Encoding.UTF8.GetString(buffer);
+                System.Diagnostics.Debug.WriteLine("line: " + line);
+
+                var startIndex = 0;
+                var j = 0;
+
+                var row = new Dictionary<string, object>();
+                foreach (var col in columnNames)
+                {
+                    var field = line.Substring(startIndex, fieldSizes[j]);
+                    row.Add(col, field.Trim());
+                    startIndex += fieldSizes[j++];
+                }
+
+                ListView.Items.Add(row);
+            }
+        }
     }
 }

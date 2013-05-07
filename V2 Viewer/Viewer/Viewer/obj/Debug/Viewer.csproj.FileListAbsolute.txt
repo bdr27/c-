@@ -25,3 +25,4 @@ E:\Documents\Dropbox\University\2013S1\CP2011\c-\V2 Viewer\Viewer\Viewer\obj\Deb
 E:\Documents\Dropbox\University\2013S1\CP2011\c-\V2 Viewer\Viewer\Viewer\obj\Debug\Viewer.csproj.GenerateResource.Cache
 E:\Documents\Dropbox\University\2013S1\CP2011\c-\V2 Viewer\Viewer\Viewer\bin\Debug\Viewer.exe
 E:\Documents\Dropbox\University\2013S1\CP2011\c-\V2 Viewer\Viewer\Viewer\bin\Debug\Viewer.pdb
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\V2 Viewer\Viewer\Viewer\obj\Debug\Viewer.csprojResolveAssemblyReference.cache

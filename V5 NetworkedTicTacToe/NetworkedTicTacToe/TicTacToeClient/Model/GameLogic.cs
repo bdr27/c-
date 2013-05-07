@@ -95,5 +95,33 @@ namespace TicTacToeClient.Model
             }
             return builder.ToString();
         }
+
+        public Piece FindWinningPiece()
+        {
+            foreach (var cell in board.cells)
+            {
+                if (cell.piece == Piece.EMPTY) continue;
+
+                var playerPiece = cell.piece;
+                foreach (var winlist in cell.winLists)
+                {
+                    var win = true;
+                    foreach (var neighbouringCell in winlist)
+                    {
+                        if (playerPiece != neighbouringCell.piece)
+                        {
+                            win = false;
+                            break;
+                        }
+                    }
+                    if (win)
+                    {
+                        return playerPiece;
+                    }
+                }
+            }
+
+            return Piece.EMPTY;
+        }
     }
 }
