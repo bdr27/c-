@@ -20,83 +20,36 @@ namespace Viewer
         private MainWindow viewer;
         private string filename;
         private FileHandler fileHandler;
-        private int[] fieldSizes;
-        private string[] columnNames;
-        private int lineSize;
-        private long filelen;
-        private long listSize;
-        private long maxSliderSize;
-        private bool activated;
-        private FileStream fileStream;
 
         public App()
             : base()
         {
             fileHandler = new FileHandler();
             viewer = new MainWindow();
+
             //wire up handlers
             wireHandlers(viewer);
+            viewer.Show();   
             
             openFileLocationDialog();
-            viewer.Show();           
+
+                   
         }
 
-        private void calculateFieldSizes()
+        private void displayHeaders()
         {
-            using (var stream = new StreamReader(filename + ".hd"))
-            {
-                var names = stream.ReadLine();
-                var widths = stream.ReadLine();
-                columnNames = new string[names.Split(',').Length];
-                fieldSizes = new int[widths.Split(',').Length];
-                var i = 0;
-                foreach (var name in names.Split(','))
-                {
-                    fieldSizes[i] = int.Parse(widths.Split(',')[i]);
-                    columnNames[i++] = name;
-                }
-
-                lineSize = fieldSizes.Sum() + 1;
-                System.Diagnostics.Debug.WriteLine("line size: " + lineSize);
-            }
-        }
-
-        private void setupHeaders()
-        {
-            viewer.ResetGridColumns();
-            List<string> headers = new List<string>();
-            foreach (var col in columnNames)
-            {
-                headers.Add(col);
-            }
+            List<string> headers = fileHandler.getHeaders();
             viewer.AddColumns(headers);
         }
-        private void setupRows(long offset)
+
+        private void displayRows(long offset)
         {
-           /* if (fileStream == null) return;
-            ListView.Items.Clear();
-            var buffer = new byte[lineSize];
-            fileStream.Seek(offset, 0);
-
-            for (var i = 0; i < (int)(ListView.ActualHeight / (ListView.FontSize + 10)); ++i)
+            viewer.ListView.Items.Clear();
+            fileHandler.setupRows(offset, (int)viewer.ListView.ActualHeight, (int) viewer.ListView.FontSize);
+            foreach (var row in fileHandler.getRows())
             {
-                fileStream.Read(buffer, 0, lineSize);
-                var line = Encoding.UTF8.GetString(buffer);
-                System.Diagnostics.Debug.WriteLine("line: " + line);
-
-                var startIndex = 0;
-                var j = 0;
-
-                var row = new Dictionary<string, object>();
-                foreach (var col in columnNames)
-                {
-                    var field = line.Substring(startIndex, fieldSizes[j]);
-                    row.Add(col, field.Trim());
-                    startIndex += fieldSizes[j++];
-                }
-
-                ListView.Items.Add(row);
-            }*/
+                viewer.ListView.Items.Add(row);
+            }
         }
 
         private void openFileLocationDialog()
@@ -113,22 +66,13 @@ namespace Viewer
             if (ok.HasValue && ok.Value == true)
             {
                 filename = dialog.FileName;
-                System.Diagnostics.Debug.WriteLine("name: " + filename);
 
-                calculateFieldSizes();
-
-                var fileInfo = new FileInfo(filename);
-                filelen = fileInfo.Length;
-                listSize = filelen / lineSize;
-                maxSliderSize = listSize - 1; // out by one
-                System.Diagnostics.Debug.WriteLine("file size: " + filelen);
-                System.Diagnostics.Debug.WriteLine("list view length: " + listSize);
-
-                setupHeaders();
-
-                fileStream = new FileStream(filename, FileMode.Open);
-
-                setupRows(0);
+                fileHandler.loadFile(filename);
+                fileHandler.calculateFieldSizes();
+                fileHandler.calculateImportantInfo();
+                fileHandler.setupHeaders();                
+                displayHeaders();
+                displayRows(0);
             }
         }
 
@@ -140,13 +84,20 @@ namespace Viewer
 
         private void HandlerWindowClosing(object sender, EventArgs e)
         {
-            fileHandler.closeFile(fileStream);
+            fileHandler.closeFile();
             Debug.WriteLine("I closed");
         }
 
-        private void HandlerSliderMovement(object sender, EventArgs e)
+        private void HandlerSliderMovement(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
+            var filePositionIndex = (long)e.NewValue;
+            var offset = filePositionIndex * fileHandler.getLineSize();
+            System.Diagnostics.Debug.WriteLine("file position: " + filePositionIndex);
+
+            displayRows(offset);
             Debug.WriteLine("I slide");
+            Debug.WriteLine("e: " + e.NewValue);
+            Debug.WriteLine("sender: " + sender.ToString());
         }
     }
 }

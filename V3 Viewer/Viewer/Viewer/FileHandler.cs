@@ -25,13 +25,13 @@ namespace Viewer
         {
         }
 
-        public void loadFile(string filename)
+        public void LoadFile(string filename)
         {
             this.filename = filename;
             fileStream = new FileStream(filename, FileMode.Open);
         }
 
-        public void calculateImportantInfo()
+        public void CalculateFileInfo()
         {
             var fileInfo = new FileInfo(filename);
             filelen = fileInfo.Length;
@@ -39,17 +39,17 @@ namespace Viewer
             maxSliderSize = listSize - 1; // out by one
         }
 
-        public void setFileInfo(FileInfo fileinfo)
+        public void SetFileInfo(FileInfo fileinfo)
         {
             fileLen = fileinfo.Length;
         }
 
-        public void closeFile()
+        public void CloseFile()
         {
             fileStream.Close();
         }
 
-        public void setupHeaders()
+        public void SetupHeaders()
         {
             headers = new List<string>();
             foreach (var col in columnNames)
@@ -58,7 +58,7 @@ namespace Viewer
             }
         }
 
-        public void setupRows(long offset, int height, int font)
+        public void SetupRows(long offset, int height, int font)
         {
             if (fileStream == null) return;
             var buffer = new byte[lineSize];
@@ -86,12 +86,12 @@ namespace Viewer
             }
         }
 
-        public List<Dictionary<string, object>> getRows()
+        public List<Dictionary<string, object>> GetRows()
         {
             return rows;
         }
 
-        public void calculateFieldSizes()
+        public void CalculateFieldSizes()
         {
             using (var stream = new StreamReader(filename + ".hd"))
             {
@@ -111,12 +111,12 @@ namespace Viewer
             }
         }
 
-        public List<string> getHeaders()
+        public List<string> GetHeaders()
         {
             return headers;
         }
 
-        public long getLineSize()
+        public long GetLineSize()
         {
             return lineSize;
         }
