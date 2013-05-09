@@ -35,7 +35,7 @@ namespace TicTacToeClient
             //Console.Write("I am here");
         }
 
-        internal void AddIPAddressMenuItemHandler(Action HandleIPAddressMenuItem)
+        public void AddIPAddressMenuItemHandler(Action HandleIPAddressMenuItem)
         {
             throw new NotImplementedException();
         }

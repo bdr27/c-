@@ -1,14 +1,8 @@
-﻿using Microsoft.Win32;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
 using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
+using Microsoft.Win32;
 
 namespace Viewer
 {
@@ -36,36 +30,60 @@ namespace Viewer
             OpenFileLocationDialog();                 
         }
 
+        /// <summary>
+        /// Wires up the closing window and slider movement for the window.
+        /// </summary>
+        /// <param name="window"></param>
         private void WireHandlers(MainWindow window)
         {
             window.AddWindowClosing(HandlerWindowClosing);
             window.AddSliderMove(HandlerSliderMovement);
         }
 
+        /// <summary>
+        /// When the window closes it closes the fileHandler
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void HandlerWindowClosing(object sender, EventArgs e)
         {
             fileHandler.CloseFile();
             Debug.WriteLine("I closed");
         }
 
+        /// <summary>
+        /// When the slider is moved it works out the new files to display
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void HandlerSliderMovement(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
+            //Gets the new position
             var filePositionIndex = (long)e.NewValue;
+            //Calculates the file offset
             var offset = filePositionIndex * fileHandler.GetLineSize();
             System.Diagnostics.Debug.WriteLine("file position: " + filePositionIndex);
 
+            //Displays the Rows that need to be displayed
             DisplayRows(offset);
             Debug.WriteLine("I slide");
             Debug.WriteLine("e: " + e.NewValue);
             Debug.WriteLine("sender: " + sender.ToString());
         }
 
+        /// <summary>
+        /// Displays the headers on the file
+        /// </summary>
         private void DisplayHeaders()
         {
             List<string> headers = fileHandler.GetHeaders();
             viewer.AddColumns(headers);
         }
 
+        /// <summary>
+        /// Updates the rows based on the current offset
+        /// </summary>
+        /// <param name="offset"></param>
         private void DisplayRows(long offset)
         {
             viewer.ListView.Items.Clear();

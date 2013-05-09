@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Viewer
 {
@@ -19,18 +17,25 @@ namespace Viewer
         private string[] columnNames;
         private FileStream fileStream;
         private List<string> headers;
-        List<Dictionary<string, object>> rows;
+        private List<Dictionary<string, object>> rows;
 
         public FileHandler()
         {
         }
 
+        /// <summary>
+        /// Loads the file
+        /// </summary>
+        /// <param name="filename"></param>
         public void LoadFile(string filename)
         {
             this.filename = filename;
             fileStream = new FileStream(filename, FileMode.Open);
         }
 
+        /// <summary>
+        /// Cacluculates the info of the file
+        /// </summary>
         public void CalculateFileInfo()
         {
             var fileInfo = new FileInfo(filename);
@@ -39,16 +44,26 @@ namespace Viewer
             maxSliderSize = listSize - 1; // out by one
         }
 
+        /// <summary>
+        /// Sets the file length based on info
+        /// </summary>
+        /// <param name="fileinfo"></param>
         public void SetFileInfo(FileInfo fileinfo)
         {
             fileLen = fileinfo.Length;
         }
 
+        /// <summary>
+        /// Closes the filestream
+        /// </summary>
         public void CloseFile()
         {
             fileStream.Close();
         }
 
+        /// <summary>
+        /// Generates the list of headers based on the file input
+        /// </summary>
         public void SetupHeaders()
         {
             headers = new List<string>();
@@ -58,6 +73,12 @@ namespace Viewer
             }
         }
 
+        /// <summary>
+        /// Set's up the rows of data that will be displayed
+        /// </summary>
+        /// <param name="offset"></param>
+        /// <param name="height"></param>
+        /// <param name="font"></param>
         public void SetupRows(long offset, int height, int font)
         {
             if (fileStream == null) return;
@@ -91,6 +112,9 @@ namespace Viewer
             return rows;
         }
 
+        /// <summary>
+        /// Calculates the Field Size
+        /// </summary>
         public void CalculateFieldSizes()
         {
             using (var stream = new StreamReader(filename + ".hd"))
