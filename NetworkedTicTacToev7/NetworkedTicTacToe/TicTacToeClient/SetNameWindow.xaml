@@ -1,0 +1,11 @@
+﻿<Window x:Class="TicTacToeClient.SetNameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Set Name Dialog" Height="165.411" Width="300" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" WindowStyle="None">
+    <Grid>
+        <Button x:Name="OkayButton" Content="Okay" HorizontalAlignment="Left" Margin="112,133,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
+        <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Height="23" Margin="10,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280"/>
+        <Label Content="Enter your player name" HorizontalAlignment="Left" Margin="84,31,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.129,0.547"/>
+
+    </Grid>
+</Window>
