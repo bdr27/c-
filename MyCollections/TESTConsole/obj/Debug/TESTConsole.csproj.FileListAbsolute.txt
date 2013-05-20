@@ -1,0 +1,8 @@
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\MyCollections\TESTConsole\bin\Debug\TESTConsole.exe.config
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\MyCollections\TESTConsole\bin\Debug\TESTConsole.exe
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\MyCollections\TESTConsole\bin\Debug\TESTConsole.pdb
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\MyCollections\TESTConsole\bin\Debug\MyCollections.dll
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\MyCollections\TESTConsole\bin\Debug\MyCollections.pdb
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\MyCollections\TESTConsole\obj\Debug\TESTConsole.csprojResolveAssemblyReference.cache
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\MyCollections\TESTConsole\obj\Debug\TESTConsole.exe
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\MyCollections\TESTConsole\obj\Debug\TESTConsole.pdb

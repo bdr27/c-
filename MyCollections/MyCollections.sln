@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCollections", "MyCollections.csproj", "{7B737983-C73A-4BDC-A09D-15A54E91D579}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDDTests", "..\TDDTests\TDDTests.csproj", "{D22C5872-FA84-4BCD-8CE2-4A6A7F783422}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TESTConsole", "TESTConsole\TESTConsole.csproj", "{A9DF98AE-5998-4288-B7B9-673F3A960DD4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B737983-C73A-4BDC-A09D-15A54E91D579}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B737983-C73A-4BDC-A09D-15A54E91D579}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B737983-C73A-4BDC-A09D-15A54E91D579}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B737983-C73A-4BDC-A09D-15A54E91D579}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D22C5872-FA84-4BCD-8CE2-4A6A7F783422}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D22C5872-FA84-4BCD-8CE2-4A6A7F783422}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D22C5872-FA84-4BCD-8CE2-4A6A7F783422}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D22C5872-FA84-4BCD-8CE2-4A6A7F783422}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9DF98AE-5998-4288-B7B9-673F3A960DD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9DF98AE-5998-4288-B7B9-673F3A960DD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9DF98AE-5998-4288-B7B9-673F3A960DD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9DF98AE-5998-4288-B7B9-673F3A960DD4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

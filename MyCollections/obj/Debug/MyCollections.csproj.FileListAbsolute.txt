@@ -1,0 +1,4 @@
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\MyCollections\bin\Debug\MyCollections.dll
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\MyCollections\bin\Debug\MyCollections.pdb
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\MyCollections\obj\Debug\MyCollections.dll
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\MyCollections\obj\Debug\MyCollections.pdb

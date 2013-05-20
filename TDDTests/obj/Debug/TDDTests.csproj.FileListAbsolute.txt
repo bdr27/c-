@@ -1,0 +1,7 @@
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\TDDTests\bin\Debug\TDDTests.dll
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\TDDTests\bin\Debug\TDDTests.pdb
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\TDDTests\bin\Debug\MyCollections.dll
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\TDDTests\bin\Debug\MyCollections.pdb
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\TDDTests\obj\Debug\TDDTests.csprojResolveAssemblyReference.cache
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\TDDTests\obj\Debug\TDDTests.dll
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\TDDTests\obj\Debug\TDDTests.pdb
