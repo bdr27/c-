@@ -1,0 +1,7 @@
+G:\Database\DataBaseStuff\DataBaseStuff\bin\Debug\DataBaseStuff.exe.config
+G:\Database\DataBaseStuff\DataBaseStuff\bin\Debug\DataBaseStuff.exe
+G:\Database\DataBaseStuff\DataBaseStuff\bin\Debug\DataBaseStuff.pdb
+G:\Database\DataBaseStuff\DataBaseStuff\bin\Debug\EntityFramework.dll
+G:\Database\DataBaseStuff\DataBaseStuff\bin\Debug\EntityFramework.xml
+G:\Database\DataBaseStuff\DataBaseStuff\obj\Debug\DataBaseStuff.exe
+G:\Database\DataBaseStuff\DataBaseStuff\obj\Debug\DataBaseStuff.pdb

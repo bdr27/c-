@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Catalog.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="CatalogStoreContainer">
+    <EntitySet Name="Artists" EntityType="Catalog.Store.Artists" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Songs" EntityType="Catalog.Store.Songs" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="ArtistSong" Association="Catalog.Store.ArtistSong">
+      <End Role="Artist" EntitySet="Artists" />
+      <End Role="Song" EntitySet="Songs" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Artists">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Country" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Songs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ArtistId" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Duration" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="ArtistSong">
+    <End Role="Artist" Type="Catalog.Store.Artists" Multiplicity="1" />
+    <End Role="Song" Type="Catalog.Store.Songs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Artist">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Song">
+        <PropertyRef Name="ArtistId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
