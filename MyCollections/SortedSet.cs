@@ -22,6 +22,7 @@ namespace MyCollections
             return (print(node.leftChild) + " " + node.value +
                 " " + print(node.rightChild)).Trim();
         }
+
         public uint Count
         {
             get { return currentNumberOfNodes; }
