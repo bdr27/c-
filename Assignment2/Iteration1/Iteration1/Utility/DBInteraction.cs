@@ -7,12 +7,12 @@ namespace MiniCheckers.Utility
     public class DBInteraction
     {
         private Dictionary<int, string> players;
-        private SortedSet<HighScore> highScores;
+        private List<Score> highScores;
 
         public DBInteraction()
         {
             players = new Dictionary<int, string>();            
-            highScores = new SortedSet<HighScore>();
+            highScores = new List<Score>();
             LoadHighScores();
         }
 
@@ -36,6 +36,7 @@ namespace MiniCheckers.Utility
 
         public void LoadHighScores()
         {
+            highScores.Clear();
             using (var context = new CheckersDatabaseContainer())
             {
                 var query = from HighScore in context.HighScores select HighScore;
@@ -45,15 +46,32 @@ namespace MiniCheckers.Utility
                     var queryGetName = from Player in context.Players where result.PlayerID == Player.PlayerID select Player.PlayerUsername;
                     foreach (var name in queryGetName)
                     {
-                        highScores.Add(new HighScore(name, result.PlayerMoves, result.PlayerScoreDate));
+                        highScores.Add(new Score(name, result.PlayerMoves, result.PlayerScoreDate));
                     }
                 }
             }
         }
 
-        public void insertHighScore(int playerID, HighScore highScore)
+        public void insertHighScore(int ScorePlayerID, Score score)
         {
+            using (var context = new CheckersDatabaseContainer())
+            {
+                var query = from Player in context.Players where Player.PlayerID == ScorePlayerID select Player;
 
+                foreach (var result in query)
+                {
+                    var player = result;
+                    var highScore = new HighScores()
+                    {
+                        Player = player,
+                        PlayerID = ScorePlayerID,
+                        PlayerMoves = score.GetPlayerMoves(),
+                        PlayerScoreDate = score.GetPlayerScoreDate()
+                    };
+                    context.HighScores.Add(highScore);
+                }
+                context.SaveChanges();                
+            }
         }
 
         public Dictionary<int, string> GetPlayers()
@@ -61,7 +79,7 @@ namespace MiniCheckers.Utility
             return players;
         }
 
-        public SortedSet<HighScore> GetHighScores()
+        public List<Score> GetHighScores()
         {
             return highScores;
         }

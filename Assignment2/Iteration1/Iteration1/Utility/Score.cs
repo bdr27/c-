@@ -2,20 +2,20 @@
 
 namespace MiniCheckers.Utility
 {
-    public class HighScore
+    public class Score
     {
         private string username;
         private int playerMoves;
         private DateTime playerScoreDate;
 
-        public HighScore(string username, int playerMoves)
+        public Score(string username, int playerMoves)
         {
             this.username = username;
             this.playerMoves = playerMoves;
             playerScoreDate = DateTime.Now;
         }
 
-        public HighScore(string username, int playerMoves, DateTime playerScoreDate)
+        public Score(string username, int playerMoves, DateTime playerScoreDate)
         {
             this.username = username;
             this.playerMoves = playerMoves;

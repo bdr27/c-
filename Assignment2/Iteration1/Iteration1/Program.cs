@@ -21,6 +21,8 @@ namespace MiniCheckers
             InvalidLoginTest("jill", "54321");
             InvalidLoginTest("douglas", "42");
             CheckDictionary(dbInteraction.GetPlayers());
+            AddNewHighScore(1, "jack", 5);
+            dbInteraction.LoadHighScores();
             CheckHighScores(dbInteraction.GetHighScores());
 
             Console.WriteLine("\nNumber of failed tests: " + failedTestsAmount);
@@ -32,7 +34,12 @@ namespace MiniCheckers
             Console.ReadLine();
         }
 
-        private static void CheckHighScores(SortedSet<HighScore> highScores)
+        private static void AddNewHighScore(int playerID, string username, int score)
+        {
+            dbInteraction.insertHighScore(playerID, new Score(username, score));
+        }
+
+        private static void CheckHighScores(List<Score> highScores)
         {
             foreach (var highScore in highScores)
             {
