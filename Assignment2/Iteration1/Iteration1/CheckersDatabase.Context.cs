@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Iteration1
+namespace MiniCheckers
 {
     using System;
     using System.Data.Entity;

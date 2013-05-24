@@ -1,27 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Iteration1.Utility
+namespace MiniCheckers.Utility
 {
     public class HighScore
     {
-        private Player player;
+        private string username;
         private int playerMoves;
         private DateTime playerScoreDate;
 
-        public HighScore(Player player, int playerMoves)
+        public HighScore(string username, int playerMoves)
         {
-            this.player = player;
+            this.username = username;
             this.playerMoves = playerMoves;
             playerScoreDate = DateTime.Now;
         }
 
-        public Player GetPlayer()
+        public HighScore(string username, int playerMoves, DateTime playerScoreDate)
         {
-            return player;
+            this.username = username;
+            this.playerMoves = playerMoves;
+            this.playerScoreDate = playerScoreDate;
+        }
+
+        public string GetUsername()
+        {
+            return username;
         }
 
         public int GetPlayerMoves()
@@ -32,6 +35,11 @@ namespace Iteration1.Utility
         public DateTime GetPlayerScoreDate()
         {
             return playerScoreDate;
+        }
+
+        public override string ToString()
+        {
+            return string.Format("{0} {1} {2}", username, playerMoves, playerScoreDate);
         }
     }
 }

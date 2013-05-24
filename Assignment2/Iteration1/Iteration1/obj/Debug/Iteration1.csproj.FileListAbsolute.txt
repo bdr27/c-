@@ -3,6 +3,5 @@ G:\CP2011\C-\Assignment2\Iteration1\Iteration1\bin\Debug\Iteration1.exe
 G:\CP2011\C-\Assignment2\Iteration1\Iteration1\bin\Debug\Iteration1.pdb
 G:\CP2011\C-\Assignment2\Iteration1\Iteration1\bin\Debug\EntityFramework.dll
 G:\CP2011\C-\Assignment2\Iteration1\Iteration1\bin\Debug\EntityFramework.xml
-G:\CP2011\C-\Assignment2\Iteration1\Iteration1\obj\Debug\Iteration1.csprojResolveAssemblyReference.cache
 G:\CP2011\C-\Assignment2\Iteration1\Iteration1\obj\Debug\Iteration1.exe
 G:\CP2011\C-\Assignment2\Iteration1\Iteration1\obj\Debug\Iteration1.pdb
