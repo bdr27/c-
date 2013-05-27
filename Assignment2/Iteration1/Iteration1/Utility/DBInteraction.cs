@@ -39,7 +39,7 @@ namespace MiniCheckers.Utility
             highScores.Clear();
             using (var context = new CheckersDatabaseContainer())
             {
-                var query = from HighScore in context.HighScores select HighScore;
+                var query = from HighScore in context.HighScores orderby HighScore.PlayerMoves ascending, HighScore.PlayerScoreDate ascending select HighScore;
 
                 foreach (var result in query)
                 {

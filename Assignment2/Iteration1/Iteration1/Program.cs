@@ -21,7 +21,7 @@ namespace MiniCheckers
             InvalidLoginTest("jill", "54321");
             InvalidLoginTest("douglas", "42");
             CheckDictionary(dbInteraction.GetPlayers());
-            AddNewHighScore(1, "jack", 5);
+           // AddNewHighScore(1, "jack", 1);
             dbInteraction.LoadHighScores();
             CheckHighScores(dbInteraction.GetHighScores());
 
