@@ -27,10 +27,10 @@ namespace ServerMiniCheckers
 
         private void WireHandlers()
         {
-            serverMiniCheckers.AddMenuNetworkSetupItemHandler(HandleMenuSetNetwork);
-            serverMiniCheckers.AddMenuMulticastSetup(HandlerMenuMulticastSetup);
-            serverMiniCheckers.AddMenuStartServer(HandleMenuStartServer);
-            serverMiniCheckers.AddMenuStopServer(HandleMenuStopServer);
+            serverMiniCheckers.AddMenuNetworkSetupHandler(HandleMenuSetNetwork);
+            serverMiniCheckers.AddMenuMulticastSetupHandler(HandlerMenuMulticastSetup);
+            serverMiniCheckers.AddMenuStartServerHandler(HandleMenuStartServer);
+            serverMiniCheckers.AddMenuStopServerHandler(HandleMenuStopServer);
         }
 
         private void HandleMenuStopServer(object sender, RoutedEventArgs e)
