@@ -24,5 +24,16 @@ namespace ServerMiniCheckers
         {
             InitializeComponent();
         }
+
+        public void UpdateTbRequestResponse(string update)
+        {
+            svRequestResponse.Content = update + "\n" + tbRequestResponse.Text;
+            
+        }
+
+        public void UpdateTbLeaderboard(string update)
+        {
+            svLeaderboard.Content = update;
+        }
     }
 }

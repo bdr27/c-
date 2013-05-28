@@ -24,5 +24,25 @@ namespace ServerMiniCheckers
         {
             InitializeComponent();
         }
+
+        public void AddMenuNetworkSetupItemHandler(RoutedEventHandler handler)
+        {
+            menuNetworkSetup.Click += handler;
+        }
+
+        public void AddMenuMulticastSetup(RoutedEventHandler handler)
+        {
+            menuMulticastSetup.Click += handler;
+        }
+
+        public void AddMenuStartServer(RoutedEventHandler handler)
+        {
+            menuStartServer.Click += handler;
+        }
+
+        public void AddMenuStopServer(RoutedEventHandler handler)
+        {
+            menuStopServer.Click += handler;
+        }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
@@ -13,5 +14,43 @@ namespace ServerMiniCheckers
     /// </summary>
     public partial class App : Application
     {
+        MainWindow serverMiniCheckers;
+       // private object HandleSetNetworkMenuItem;
+
+        public App()
+            : base ()
+        {
+            serverMiniCheckers = new MainWindow();            
+            WireHandlers();
+            serverMiniCheckers.Show();
+        }
+
+        private void WireHandlers()
+        {
+            serverMiniCheckers.AddMenuNetworkSetupItemHandler(HandleMenuSetNetwork);
+            serverMiniCheckers.AddMenuMulticastSetup(HandlerMenuMulticastSetup);
+            serverMiniCheckers.AddMenuStartServer(HandleMenuStartServer);
+            serverMiniCheckers.AddMenuStopServer(HandleMenuStopServer);
+        }
+
+        private void HandleMenuStopServer(object sender, RoutedEventArgs e)
+        {
+            Debug.WriteLine("Server Stopping");
+        }
+
+        private void HandleMenuStartServer(object sender, RoutedEventArgs e)
+        {
+            Debug.WriteLine("Server Starting");
+        }
+
+        private void HandlerMenuMulticastSetup(object sender, RoutedEventArgs e)
+        {
+            Debug.WriteLine("Setup Multicast");
+        }
+
+        private void HandleMenuSetNetwork(object sender, RoutedEventArgs e)
+        {
+            Debug.WriteLine("Setup Network");
+        }
     }
 }

@@ -10,10 +10,10 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
         
-        <TextBlock Grid.Column="0" Text="Request/Response Log" VerticalAlignment="Top" HorizontalAlignment="Center" />
-        <TextBlock Grid.Column="1" Text="Leaderboard" VerticalAlignment="Top" HorizontalAlignment="Center" />
-        <ScrollViewer Grid.Column="0" Margin="0,30,0,0"/>
-        <ScrollViewer Grid.Column="1" Margin="0,30,0,0"/>
+        <TextBlock x:Name="tbRequestResponse" Text="Request/Response Log" VerticalAlignment="Top" HorizontalAlignment="Center" />
+        <TextBlock x:Name="tbLeaderboard" Grid.Column="1" Text="Leaderboard" VerticalAlignment="Top" HorizontalAlignment="Center" />
+        <ScrollViewer x:Name="svRequestResponse" Grid.Column="0" Margin="0,30,0,0"/>
+        <ScrollViewer x:Name="svLeaderboard" Grid.Column="1" Margin="0,30,0,0"/>
 
     </Grid>
 </UserControl>

@@ -12,8 +12,6 @@
                 <MenuItem x:Name="menuStopServer" Header="Stop Server" />
             </MenuItem>
         </Menu>
-        <Grid>
-            <serverStatus:ServerDetails x:Name="serverStatus"/>
-        </Grid>
+        <serverStatus:ServerDetails x:Name="serverStatus"/>
     </DockPanel>
 </Window>
