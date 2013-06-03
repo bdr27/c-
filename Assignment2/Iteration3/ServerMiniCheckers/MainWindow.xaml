@@ -1,0 +1,17 @@
+﻿<Window x:Class="ServerMiniCheckers.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:serverStatus="clr-namespace:ServerMiniCheckers"
+        Title="Brendan Russo Mini-Checkers Server v0.2" Height="350" Width="525">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="System">
+                <MenuItem x:Name="menuNetworkSetup" Header="Network Setup"/>
+                <MenuItem x:Name="menuMulticastSetup" Header="Multicast Setup"/>
+                <MenuItem x:Name="menuStartServer" Header="Start Server"/>
+                <MenuItem x:Name="menuStopServer" Header="Stop Server" />
+            </MenuItem>
+        </Menu>
+        <serverStatus:ServerDetails x:Name="serverStatus"/>
+    </DockPanel>
+</Window>
