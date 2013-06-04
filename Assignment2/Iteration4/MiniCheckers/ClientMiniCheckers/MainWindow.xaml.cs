@@ -10,8 +10,6 @@ namespace ClientMiniCheckers
         public MainWindow()
         {
             InitializeComponent();
-            lbAvaliablePlayers.Items.Add("John");
-            lbAvaliablePlayers.Items.Add("Sarah");
         }
 
         public void AddMenuSetNetworkHandler(RoutedEventHandler handler)

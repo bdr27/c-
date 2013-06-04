@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 using System.Windows;
+using ClientMiniCheckers.Modal;
+using ServerMiniCheckers.Modal;
+using ServerMiniCheckers.Network;
 
 namespace ClientMiniCheckers
 {
@@ -15,6 +12,9 @@ namespace ClientMiniCheckers
     public partial class App : Application
     {
         MainWindow clientMiniCheckers;
+        NetworkDetails sendAddress;
+        NetworkDetails multicastAddress;
+
         public App()
             : base()
         {
@@ -33,12 +33,23 @@ namespace ClientMiniCheckers
 
         private void HandlerSetNetwork(object sender, RoutedEventArgs e)
         {
-            Debug.WriteLine("Set network");
+            var dialog = new IPAddressModal();
+            dialog.Owner = clientMiniCheckers;
+            dialog.ShowDialog();
+            sendAddress = dialog.GetNetworkDetails();
+
+            Debug.WriteLine("Sending to: " + sendAddress);
         }
 
         private void HandleMenuSetMulticast(object sender, RoutedEventArgs e)
         {
-            Debug.WriteLine("Set multicast");
+            var dialog = new IPAddressModal();
+            dialog.Owner = clientMiniCheckers;
+            dialog.SetMultiCast();
+            dialog.ShowDialog();
+            multicastAddress = dialog.GetNetworkDetails();
+
+            Debug.WriteLine("Set multicast to: " + multicastAddress);
         }
 
         private void HandleMenuLogout(object sender, RoutedEventArgs e)
@@ -48,7 +59,13 @@ namespace ClientMiniCheckers
 
         private void HandleMenuLogin(object sender, RoutedEventArgs e)
         {
-            Debug.WriteLine("Set login");
+            var dialog = new LoginModal();
+            dialog.Owner = clientMiniCheckers;
+            dialog.ShowDialog();
+
+            var secondDialog = new LoginErrorModal();
+            secondDialog.Owner = clientMiniCheckers;
+            secondDialog.ShowDialog();
         }
     }
 }

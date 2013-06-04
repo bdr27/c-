@@ -8,6 +8,8 @@ namespace ServerMiniCheckers.Network
 {
     public interface MessageHandler
     {
-
+        void ConnectTo(string address, int port);
+        void SendRequest(string message);
+        string GetResponse();
     }
 }

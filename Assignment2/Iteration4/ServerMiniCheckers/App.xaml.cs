@@ -45,7 +45,7 @@ namespace ServerMiniCheckers
         }
         private void GetNetworkInfo()
         {
-            IPAddress ipAddress = new IPAddress();
+            IPAddressModal ipAddress = new IPAddressModal();
             ipAddress.SetStaticIP();
             networkDetails = ipAddress.GetNetworkDetails();
         }
@@ -88,11 +88,11 @@ namespace ServerMiniCheckers
 
         private void HandlerMenuMulticastSetup(object sender, RoutedEventArgs e)
         {
-            IPAddress ipAddress = new IPAddress();
-            ipAddress.Owner = serverMiniCheckers;
-            ipAddress.SetMultiCast();
-            ipAddress.ShowDialog();
-            multiCastDetails = ipAddress.GetNetworkDetails();
+            var dialog = new IPAddressModal();
+            dialog.Owner = serverMiniCheckers;
+            dialog.SetMultiCast();
+            dialog.ShowDialog();
+            multiCastDetails = dialog.GetNetworkDetails();
             CheckStartServer();
             updateRequestResponse("Setting multicast details to: " + multiCastDetails.ToString());
             Debug.WriteLine(multiCastDetails.ToString());
@@ -101,11 +101,11 @@ namespace ServerMiniCheckers
 
         private void HandleMenuSetNetwork(object sender, RoutedEventArgs e)
         {
-            IPAddress ipAddress = new IPAddress();
-            ipAddress.Owner = serverMiniCheckers;
-            ipAddress.SetStaticIP();
-            ipAddress.ShowDialog();
-            networkDetails = ipAddress.GetNetworkDetails();
+            var dialog = new IPAddressModal();
+            dialog.Owner = serverMiniCheckers;
+            dialog.SetStaticIP();
+            dialog.ShowDialog();
+            networkDetails = dialog.GetNetworkDetails();
             CheckStartServer();
             updateRequestResponse("Setting network details to: " + networkDetails.ToString());
             Debug.WriteLine(networkDetails.ToString());

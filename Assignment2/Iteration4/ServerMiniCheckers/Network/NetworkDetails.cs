@@ -39,7 +39,7 @@ namespace ServerMiniCheckers.Network
 
         public override string ToString()
         {
-            return "Port : " + portNumber + " IP Address: " + ipAddress;
+            return "IP Address: " + ipAddress + " Port : " + portNumber;
         }
     }
 }

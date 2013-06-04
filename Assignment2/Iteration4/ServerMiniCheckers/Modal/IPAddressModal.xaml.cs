@@ -10,11 +10,14 @@ namespace ServerMiniCheckers.Modal
     /// <summary>
     /// Interaction logic for IPAddress.xaml
     /// </summary>
-    public partial class IPAddress : Window
+    public partial class IPAddressModal : Window
     {
-        public IPAddress()
+        private IPAddressModalState state;
+
+        public IPAddressModal()
         {
             InitializeComponent();
+            state = IPAddressModalState.IPADDRESS;
         }
 
         private void btnOkay_Click(object sender, RoutedEventArgs e)
@@ -23,6 +26,12 @@ namespace ServerMiniCheckers.Modal
         }
 
         public void SetStaticIP()
+        {
+            tbIPAddress.Text = getLocalIP();
+            tbIPAddress.IsEnabled = false;
+        }
+
+        public string getLocalIP()
         {
             var IPAddresses = Dns.GetHostAddresses(Dns.GetHostName());
             var localIP = "";
@@ -35,12 +44,12 @@ namespace ServerMiniCheckers.Modal
                     break;
                 }
             }
-            tbIPAddress.Text = localIP;
-            tbIPAddress.IsEnabled = false;
+            return localIP;
         }
 
         public void SetMultiCast()
         {
+            state = IPAddressModalState.MULTICAST;
             tbIPAddress.IsEnabled = true;
             sldPortNumber.Value = 50001;
         }
@@ -80,6 +89,24 @@ namespace ServerMiniCheckers.Modal
                 validAddress = true;
             }
             return validAddress;
+        }
+
+        private enum IPAddressModalState
+        {
+            IPADDRESS, MULTICAST
+        }
+
+        private void btnLazyAss_Click(object sender, RoutedEventArgs e)
+        {
+            switch (state)
+            {
+                case IPAddressModalState.IPADDRESS:
+                    tbIPAddress.Text = getLocalIP();
+                    break;
+                case IPAddressModalState.MULTICAST:
+                    tbIPAddress.Text = "228.5.6.7";
+                    break;
+            }
         }
     }
 }

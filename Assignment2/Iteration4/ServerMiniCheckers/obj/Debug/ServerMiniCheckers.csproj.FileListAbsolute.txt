@@ -37,10 +37,8 @@ E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\ServerMi
 E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\ServerMiniCheckers\bin\Debug\ServerMiniCheckers.exe
 E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\ServerMiniCheckers\bin\Debug\ServerMiniCheckers.pdb
 E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\ServerMiniCheckers\obj\Debug\ServerMiniCheckers.csprojResolveAssemblyReference.cache
-E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\ServerMiniCheckers\obj\Debug\Modal\IPAddress.baml
 E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\ServerMiniCheckers\obj\Debug\ServerDetails.baml
 E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\ServerMiniCheckers\obj\Debug\MainWindow.g.cs
-E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\ServerMiniCheckers\obj\Debug\Modal\IPAddress.g.cs
 E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\ServerMiniCheckers\obj\Debug\ServerDetails.g.cs
 E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\ServerMiniCheckers\obj\Debug\App.g.cs
 E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\ServerMiniCheckers\obj\Debug\GeneratedInternalTypeHelper.g.cs
@@ -50,3 +48,5 @@ E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\ServerMi
 E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\ServerMiniCheckers\obj\Debug\ServerMiniCheckers.g.resources
 E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\ServerMiniCheckers\obj\Debug\ServerMiniCheckers.Properties.Resources.resources
 E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\ServerMiniCheckers\obj\Debug\ServerMiniCheckers.csproj.GenerateResource.Cache
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\ServerMiniCheckers\obj\Debug\Modal\IPAddressModal.baml
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\ServerMiniCheckers\obj\Debug\Modal\IPAddressModal.g.cs
