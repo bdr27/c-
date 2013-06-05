@@ -11,3 +11,16 @@ E:\Documents\Dropbox\University\2013S1\CP2011\c-\NetworkedTicTacToev6\NetworkedT
 E:\Documents\Dropbox\University\2013S1\CP2011\c-\NetworkedTicTacToev6\NetworkedTicTacToe\TestGUIClient\obj\Debug\TestGUIClient.csproj.GenerateResource.Cache
 E:\Documents\Dropbox\University\2013S1\CP2011\c-\NetworkedTicTacToev6\NetworkedTicTacToe\TestGUIClient\obj\Debug\TestGUIClient.exe
 E:\Documents\Dropbox\University\2013S1\CP2011\c-\NetworkedTicTacToev6\NetworkedTicTacToe\TestGUIClient\obj\Debug\TestGUIClient.pdb
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\NetworkedTicTacToev7\NetworkedTicTacToe\TestGUIClient\bin\Debug\TestGUIClient.exe.config
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\NetworkedTicTacToev7\NetworkedTicTacToe\TestGUIClient\bin\Debug\TestGUIClient.exe
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\NetworkedTicTacToev7\NetworkedTicTacToe\TestGUIClient\bin\Debug\TestGUIClient.pdb
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\NetworkedTicTacToev7\NetworkedTicTacToe\TestGUIClient\obj\Debug\TestGUIClient.csprojResolveAssemblyReference.cache
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\NetworkedTicTacToev7\NetworkedTicTacToe\TestGUIClient\obj\Debug\MainWindow.baml
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\NetworkedTicTacToev7\NetworkedTicTacToe\TestGUIClient\obj\Debug\MainWindow.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\NetworkedTicTacToev7\NetworkedTicTacToe\TestGUIClient\obj\Debug\App.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\NetworkedTicTacToev7\NetworkedTicTacToe\TestGUIClient\obj\Debug\TestGUIClient_MarkupCompile.cache
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\NetworkedTicTacToev7\NetworkedTicTacToe\TestGUIClient\obj\Debug\TestGUIClient.g.resources
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\NetworkedTicTacToev7\NetworkedTicTacToe\TestGUIClient\obj\Debug\TestGUIClient.Properties.Resources.resources
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\NetworkedTicTacToev7\NetworkedTicTacToe\TestGUIClient\obj\Debug\TestGUIClient.csproj.GenerateResource.Cache
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\NetworkedTicTacToev7\NetworkedTicTacToe\TestGUIClient\obj\Debug\TestGUIClient.exe
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\NetworkedTicTacToev7\NetworkedTicTacToe\TestGUIClient\obj\Debug\TestGUIClient.pdb

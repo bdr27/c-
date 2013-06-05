@@ -118,6 +118,8 @@ namespace TestGUIServer
         private void Window_Closing_1(object sender, System.ComponentModel.CancelEventArgs e)
         {
             running = false;
+            backgroundThread.Interrupt();
+            anotherBackthread.Interrupt();
         }
     }
 }
