@@ -53,12 +53,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Utility\CheckRegex.cs" />
     <Compile Include="Modal\IPAddressModal.xaml.cs">
       <DependentUpon>IPAddressModal.xaml</DependentUpon>
     </Compile>
     <Compile Include="Network\BroadcastListener.cs" />
     <Compile Include="Network\MessageHandler.cs" />
     <Compile Include="Network\NetworkDetails.cs" />
+    <Compile Include="Network\ServerUDPMessageHandler.cs" />
     <Compile Include="Network\UDPListener.cs" />
     <Compile Include="Utility\DBHandler.cs" />
     <Compile Include="ServerDetails.xaml.cs">

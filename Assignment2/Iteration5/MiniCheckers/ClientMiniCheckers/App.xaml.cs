@@ -27,7 +27,7 @@ namespace ClientMiniCheckers
         {
             messageSent = MessageSent.NONE;
             clientMiniCheckers = new MainWindow();
-            udpHandler = new UDPMessageHandler();
+            udpHandler = new ClientUDPMessageHandler();
             clientMiniCheckers.Show();
             WireHandlers();
             setupRequestResponseBackgroundThead();
@@ -55,6 +55,9 @@ namespace ClientMiniCheckers
                             action = "Login";
                             break;
                         case MessageSent.LOGOUT:
+                            clientMiniCheckers.UpdateStatus("Logged out");
+                            clientMiniCheckers.MenuLogoutSuccessful();
+                            username = "";
                             action = "Logout";
                             break;
                         case MessageSent.NONE:

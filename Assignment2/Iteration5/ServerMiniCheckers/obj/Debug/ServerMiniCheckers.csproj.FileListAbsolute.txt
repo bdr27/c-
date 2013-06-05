@@ -68,3 +68,4 @@ E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration5\ServerMi
 E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration5\ServerMiniCheckers\bin\Debug\ServerMiniCheckers.exe.config
 E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration5\ServerMiniCheckers\bin\Debug\ServerMiniCheckers.exe
 E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration5\ServerMiniCheckers\bin\Debug\ServerMiniCheckers.pdb
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration5\ServerMiniCheckers\obj\Debug\ServerMiniCheckers.csprojResolveAssemblyReference.cache

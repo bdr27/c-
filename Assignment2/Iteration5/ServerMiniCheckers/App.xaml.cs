@@ -5,6 +5,9 @@ using System.Configuration;
 using System.Data;
 using System.Diagnostics;
 using System.Linq;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -24,9 +27,11 @@ namespace ServerMiniCheckers
         private NetworkDetails multiCastDetails = null;
         private DBHandler dbHandler;
         private List<string> requestResponseLog;
+        private List<string> loggedOnUsers;
         private ServerState serverState = ServerState.STOPPED;
         private Thread requestResponseThread;
         private bool running;
+        private MessageHandler udpMessageHandler;
 
         public App()
             : base ()
@@ -35,6 +40,7 @@ namespace ServerMiniCheckers
             requestResponseLog = new List<string>();
             dbHandler = new MOCKDBHandler();
             running = false;
+            udpMessageHandler = new ServerUDPMessageHandler();
 
             SetupThreads();
             WireHandlers();
@@ -52,16 +58,40 @@ namespace ServerMiniCheckers
         private void SetupThreads()
         {
             requestResponseThread = new Thread(new ThreadStart(RequestResponseBackground_Thread));
-            requestResponseThread.Start();
         }
 
         private void RequestResponseBackground_Thread()
         {
+            udpMessageHandler.ConnectTo(networkDetails.GetIPAddress(), networkDetails.GetPortNumber());
             while (serverState.Equals(ServerState.RUNNING))
             {
-
+                Debug.WriteLine("Listening to port: " + networkDetails.GetPortNumber());
+                var response = udpMessageHandler.GetResponse();
+                var request = CheckResponse(response);
+                udpMessageHandler.SendRequest(request);
+                
             }
+            udpMessageHandler.Close();
         }
+
+        private string CheckResponse(string response)
+        {
+            var message = "ERROR";
+
+            if (CheckRegex.checkLogin(response))
+            {
+                var usernamePassword = response.Split(',');
+                var username = usernamePassword[1];
+                var password = usernamePassword[2];
+                if(dbHandler.IsValidLogin(username, password) && !loggedOnUsers.Contains(username))
+                {
+                    message = "OKAY";
+                }
+            }
+            return message;
+
+        }
+
         private void GetNetworkInfo()
         {
             IPAddressModal ipAddress = new IPAddressModal();
@@ -90,15 +120,22 @@ namespace ServerMiniCheckers
 
         private void HandleMenuStopServer(object sender, RoutedEventArgs e)
         {
+
             serverState = ServerState.STOPPED;
             serverMiniCheckers.UpdateMenuState(serverState);
-            
+
+            requestResponseThread.Interrupt();
+            udpMessageHandler.Close();
+
+            loggedOnUsers = null;
+
             updateRequestResponse("Server stopped");
             Debug.WriteLine("Server Stopping");
         }
 
         private void HandleMenuStartServer(object sender, RoutedEventArgs e)
         {
+            loggedOnUsers = new List<string>();
             serverState = ServerState.RUNNING;
             requestResponseThread.Start();
             serverMiniCheckers.UpdateMenuState(serverState);
@@ -110,7 +147,6 @@ namespace ServerMiniCheckers
         {
             var dialog = new IPAddressModal();
             dialog.Owner = serverMiniCheckers;
-            requestResponseThread.Interrupt();
             dialog.SetMultiCast();
             dialog.ShowDialog();
             multiCastDetails = dialog.GetNetworkDetails();

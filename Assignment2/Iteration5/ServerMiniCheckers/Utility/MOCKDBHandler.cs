@@ -20,17 +20,24 @@ namespace ServerMiniCheckers.Utility
 
         public bool IsValidLogin(string username, string password)
         {
-            if(username.Equals("jack") && password.Equals("12345"))
+            if (!players.Values.Contains(username))
             {
-                players.Add(1, "jack");
-            }
-            else if(username.Equals("jill") && password.Equals("54321"))
-            {
-                players.Add(2, "jill");
-            }
-            else if(username.Equals("douglas") && password.Equals("42"))
-            {
-                players.Add(3, "douglas");
+                if (username.Equals("jack") && password.Equals("12345"))
+                {
+                        players.Add(1, "jack");
+                }
+                else if (username.Equals("jill") && password.Equals("54321"))
+                {
+                        players.Add(2, "jill");
+                }
+                else if (username.Equals("douglas") && password.Equals("42"))
+                {
+                       players.Add(3, "douglas");
+                }
+                else
+                {
+                    return false;
+                }
             }
             else
             {
