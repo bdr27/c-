@@ -64,7 +64,7 @@ namespace ServerMiniCheckers.Utility
 
         public Dictionary<int, string> GetPlayers()
         {
-            throw new NotImplementedException();
+            return players;
         }
 
         public List<Score> GetHighScores()

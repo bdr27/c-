@@ -60,6 +60,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Network\ClientUDPBroadcastHandler.cs" />
     <Compile Include="Network\ClientUDPMessageHandler.cs" />
     <Compile Include="Utility\MessageSent.cs" />
     <Page Include="MainWindow.xaml">

@@ -25,7 +25,10 @@ namespace ServerMiniCheckers.Utility
             {
                 userMulticast = userMulticast + players[i] + ",";
             }
-            userMulticast += players[players.Count - 1];
+            if (players.Count > 0)
+            {
+                userMulticast += players[players.Count - 1];
+            }
             return userMulticast;
         }
     }

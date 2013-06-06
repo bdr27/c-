@@ -80,7 +80,7 @@ namespace ServerMiniCheckers.Modal
 
         private bool checkValidIPAddress(string iPAddress)
         {
-            return CheckRegex.checkValidIP(iPAddress);
+            return CheckRegex.CheckValidIP(iPAddress);
         }
 
         private enum IPAddressModalState

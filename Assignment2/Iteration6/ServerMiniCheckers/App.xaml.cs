@@ -64,7 +64,7 @@ namespace ServerMiniCheckers
 
         private void RequestResponseBackground_Thread()
         {
-            multicastSender.ConnectTo(multiCastDetails.GetIPAddress(), networkDetails.GetPortNumber());
+            multicastSender.ConnectTo(multiCastDetails.GetIPAddress(), multiCastDetails.GetPortNumber());
             udpMessageHandler.ConnectTo(networkDetails.GetIPAddress(), networkDetails.GetPortNumber());
             while (serverState.Equals(ServerState.RUNNING))
             {
@@ -72,7 +72,7 @@ namespace ServerMiniCheckers
                 var response = udpMessageHandler.GetResponse();
                 var request = CheckResponse(response);
                 udpMessageHandler.SendRequest(request);
-
+                multicastSender.SendRequest("hello world");
             }
             udpMessageHandler.Close();
         }
@@ -81,7 +81,7 @@ namespace ServerMiniCheckers
         {
             var message = "ERROR";
 
-            if (CheckRegex.checkLogin(response))
+            if (CheckRegex.CheckLogin(response))
             {
                 var usernamePassword = response.Split(',');
                 var username = usernamePassword[1];
@@ -92,7 +92,7 @@ namespace ServerMiniCheckers
                     MulticastSendPlayers();
                 }
             }
-            else if (CheckRegex.checkLogout(response))
+            else if (CheckRegex.CheckLogout(response))
             {
                 var username = response.Split(',')[1];
                 if (dbHandler.IsValidLogout(username))
@@ -101,36 +101,14 @@ namespace ServerMiniCheckers
                     MulticastSendPlayers();
                 }
             }
-
             return message;
         }
 
         private void MulticastSendPlayers()
         {
-            var players = GetListOfPlayers(dbHandler.GetPlayers());
-            var message = GetMulticastSendPlayersMessage(players);
+            var players = GetMulticastBroadcasts.GetListOfPlayers(dbHandler.GetPlayers());
+            var message = GetMulticastBroadcasts.GetMulticastSendPlayersMessage(players);
             multicastSender.SendRequest(message);
-        }
-
-        private List<String> GetListOfPlayers(Dictionary<int, string> dictionary)
-        {
-            var players = new List<string>();
-            foreach (var player in dictionary.Values)
-            {
-                players.Add(player);
-            }
-            return players;
-        }
-
-        private string GetMulticastSendPlayersMessage(List<string> players)
-        {
-            var userMulticast = "USERS,";
-            for (int i = 0; i < players.Count - 1; i++)
-            {
-                userMulticast = userMulticast + players[i] + ",";
-            }
-            userMulticast += players[players.Count - 1];
-            return userMulticast;
         }
 
         private void GetNetworkInfo()

@@ -10,37 +10,50 @@ namespace MiniCheckersUnitTests
         [TestMethod]
         public void CheckValidLogin()
         {
-            Assert.IsTrue(CheckRegex.checkLogin("LOGIN,jack,12345"));
+            Assert.IsTrue(CheckRegex.CheckLogin("LOGIN,jack,12345"));
         }
 
         [TestMethod]
         public void CheckInvalidLogin()
         {
-            Assert.IsFalse(CheckRegex.checkLogin("LOGIN,jack"));
+            Assert.IsFalse(CheckRegex.CheckLogin("LOGIN,jack"));
         }
 
         [TestMethod]
         public void CheckIsValidIP()
         {
-            Assert.IsTrue(CheckRegex.checkValidIP("127.0.0.1"));
+            Assert.IsTrue(CheckRegex.CheckValidIP("127.0.0.1"));
         }
 
         [TestMethod]
         public void CheckLeadingZeroIP()
         {
-            Assert.IsFalse(CheckRegex.checkValidIP("190.05.5.6"));
+            Assert.IsFalse(CheckRegex.CheckValidIP("190.05.5.6"));
         }
 
         [TestMethod]
         public void CheckValidLogout()
         {
-            Assert.IsTrue(CheckRegex.checkLogout("LOGOUT,jack"));
+            Assert.IsTrue(CheckRegex.CheckLogout("LOGOUT,jack"));
         }
 
         [TestMethod]
         public void CheckInvalidValidLogout()
         {
-            Assert.IsFalse(CheckRegex.checkLogout("LOGOUT"));
+            Assert.IsFalse(CheckRegex.CheckLogout("LOGOUT"));
+        }
+
+        [TestMethod]
+        public void CheckValidUsers()
+        {
+            Assert.IsTrue(CheckRegex.CheckValidUsers("USERS,jack,jill"));
+            Assert.IsTrue(CheckRegex.CheckValidUsers("USERS,"));
+        }
+
+        [TestMethod]
+        public void CheckInvalidUsers()
+        {
+            Assert.IsFalse(CheckRegex.CheckValidUsers("USERS,jack-"));
         }
     }
 }

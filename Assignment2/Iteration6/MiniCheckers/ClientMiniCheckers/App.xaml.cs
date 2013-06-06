@@ -6,6 +6,7 @@ using ClientMiniCheckers.Utility;
 using ClientMiniCheckers.Network;
 using ServerMiniCheckers.Network;
 using ServerMiniCheckers.Modal;
+using ServerMiniCheckers.Utility;
 
 namespace ClientMiniCheckers
 {
@@ -18,6 +19,7 @@ namespace ClientMiniCheckers
         private NetworkDetails sendAddress;
         private NetworkDetails multicastAddress;
         private MessageHandler udpHandler;
+        private MessageHandler multicastHandler;
         private Thread requestResponseThread;
         private Thread multicastRequestThread;
         private MessageSent messageSent;
@@ -29,6 +31,7 @@ namespace ClientMiniCheckers
             messageSent = MessageSent.NONE;
             clientMiniCheckers = new MainWindow();
             udpHandler = new ClientUDPMessageHandler();
+            multicastHandler = new ClientUDPBroadcastHandler();
             clientMiniCheckers.Show();
             WireHandlers();
             setupRequestResponseBackgroundThead();
@@ -40,6 +43,23 @@ namespace ClientMiniCheckers
             requestResponseThread.IsBackground = true;
             multicastRequestThread = new Thread(new ThreadStart(MulticastRequestBackgroud_Thread));
             multicastRequestThread.IsBackground = true;
+        }
+
+        private void MulticastRequestBackgroud_Thread()
+        {
+            while (true)
+            {
+                var message = multicastHandler.GetResponse();
+                CheckMulticastMessage(message);
+            }
+        }
+
+        private void CheckMulticastMessage(string message)
+        {
+            if (CheckRegex.CheckValidUsers(message))
+            {
+                var players = new List<string>() 
+            }
         }
 
         private void RequestResponseBackground_Thread()
@@ -133,6 +153,7 @@ namespace ClientMiniCheckers
             dialog.SetMultiCast();
             dialog.ShowDialog();
             multicastAddress = dialog.GetNetworkDetails();
+            multicastHandler.ConnectTo(multicastAddress.GetIPAddress(), multicastAddress.GetPortNumber());
             SetUserLogin();
 
             Debug.WriteLine("Set multicast to: " + multicastAddress);
@@ -165,9 +186,15 @@ namespace ClientMiniCheckers
             else
             {
                 udpHandler.ConnectTo(sendAddress.GetIPAddress(), sendAddress.GetPortNumber());
-                requestResponseThread.Start();
+                StartThreads();
                 clientMiniCheckers.EnableLogin();
             }
+        }
+
+        private void StartThreads()
+        {
+            requestResponseThread.Start();
+            multicastRequestThread.Start();
         }
     }
 }
