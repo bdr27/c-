@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Windows;
 
 namespace ClientMiniCheckers
 {
@@ -7,9 +9,13 @@ namespace ClientMiniCheckers
     /// </summary>
     public partial class MainWindow : Window
     {
+        private ObservableCollection<string> players;
+
         public MainWindow()
         {
             InitializeComponent();
+            players = new ObservableCollection<string>();
+            lbAvaliablePlayers.ItemsSource = players;
         }
 
         public void AddMenuSetNetworkHandler(RoutedEventHandler handler)
@@ -66,6 +72,28 @@ namespace ClientMiniCheckers
                     menuLogin.IsEnabled = true;
                     menuLogout.IsEnabled = false;
                 });
+        }
+
+        public void AddPlayers(List<string> newPlayers)
+        {
+            Dispatcher.Invoke(() =>
+                {
+                    players.Clear();
+                    foreach (var player in newPlayers)
+                    {
+                        players.Add(player);
+                    }
+                });
+        }
+
+        public void AddPlayersListViewHandler(System.Windows.Input.MouseButtonEventHandler handler)
+        {
+            lbAvaliablePlayers.MouseUp += handler;
+        }
+
+        public string GetSelectedPlayer()
+        {
+            return lbAvaliablePlayers.SelectedItem as string;
         }
     }
 }

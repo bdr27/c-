@@ -7,6 +7,8 @@ using ClientMiniCheckers.Network;
 using ServerMiniCheckers.Network;
 using ServerMiniCheckers.Modal;
 using ServerMiniCheckers.Utility;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace ClientMiniCheckers
 {
@@ -35,6 +37,16 @@ namespace ClientMiniCheckers
             clientMiniCheckers.Show();
             WireHandlers();
             setupRequestResponseBackgroundThead();
+
+         //   testBinding();
+        }
+        private void testBinding()
+        {
+            var players = new List<string>();
+            players.Add("jack");
+            players.Add("jill");
+
+            clientMiniCheckers.AddPlayers(players);
         }
 
         private void setupRequestResponseBackgroundThead()
@@ -58,7 +70,14 @@ namespace ClientMiniCheckers
         {
             if (CheckRegex.CheckValidUsers(message))
             {
-                var players = new List<string>() 
+                Debug.WriteLine("Adding new players");
+                var userListOfPlayers = message.Split(',');
+                var listOfPlayers = new List<string>();
+                for (int i = 1; i < userListOfPlayers.Length; i++)
+                {
+                    listOfPlayers.Add(userListOfPlayers[i]);
+                }
+                clientMiniCheckers.AddPlayers(listOfPlayers);
             }
         }
 
@@ -132,6 +151,19 @@ namespace ClientMiniCheckers
             clientMiniCheckers.AddMenuLogoutHandler(HandleMenuLogout);
             clientMiniCheckers.AddMenuSetMulticastHandler(HandleMenuSetMulticast);
             clientMiniCheckers.AddMenuSetNetworkHandler(HandlerSetNetwork);
+            clientMiniCheckers.AddPlayersListViewHandler(HandleListView);
+        }
+
+        private void HandleListView(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            var opponent = clientMiniCheckers.GetSelectedPlayer();
+            if (opponent.Equals(username))
+            {
+                var dialog = new PlayWithYourselfModal();
+                dialog.Owner = clientMiniCheckers;
+                dialog.ShowDialog();
+            }
+            Debug.WriteLine(opponent);
         }
 
         private void HandlerSetNetwork(object sender, RoutedEventArgs e)

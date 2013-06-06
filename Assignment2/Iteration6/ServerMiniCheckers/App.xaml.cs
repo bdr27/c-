@@ -72,7 +72,11 @@ namespace ServerMiniCheckers
                 var response = udpMessageHandler.GetResponse();
                 var request = CheckResponse(response);
                 udpMessageHandler.SendRequest(request);
-                multicastSender.SendRequest("hello world");
+
+                if (CheckRegex.CheckLogin(response) || CheckRegex.CheckLogout(response))
+                {
+                    MulticastSendPlayers();
+                }
             }
             udpMessageHandler.Close();
         }
@@ -89,7 +93,7 @@ namespace ServerMiniCheckers
                 if (dbHandler.IsValidLogin(username, password) && !loggedOnUsers.Contains(username))
                 {
                     message = "OKAY";
-                    MulticastSendPlayers();
+                   // MulticastSendPlayers();
                 }
             }
             else if (CheckRegex.CheckLogout(response))
@@ -98,7 +102,7 @@ namespace ServerMiniCheckers
                 if (dbHandler.IsValidLogout(username))
                 {
                     message = "OKAY";
-                    MulticastSendPlayers();
+                  //  MulticastSendPlayers();
                 }
             }
             return message;

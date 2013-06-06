@@ -60,6 +60,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Modal\PlayWithYourselfModal.xaml.cs">
+      <DependentUpon>PlayWithYourselfModal.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Network\ClientUDPBroadcastHandler.cs" />
     <Compile Include="Network\ClientUDPMessageHandler.cs" />
     <Compile Include="Utility\MessageSent.cs" />
@@ -84,6 +87,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Modal\LoginModal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modal\PlayWithYourselfModal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
