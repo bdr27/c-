@@ -14,11 +14,15 @@ namespace ClientMiniCheckers.Network
         private IPEndPoint localIP;
         private UdpClient udpClient;
         private IPAddress multicastingIP;
+        private int port;
+        private string address;
 
         #region MessageHandler Members
 
         public void ConnectTo(string address, int port)
         {
+            this.port = port;
+            this.address = address;
             localIP = new IPEndPoint(IPAddress.Any, port);
             udpClient = new UdpClient();
             udpClient.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
@@ -36,6 +40,7 @@ namespace ClientMiniCheckers.Network
 
         public string GetResponse()
         {
+            localIP = new IPEndPoint(IPAddress.Any, port);
             var bytes = udpClient.Receive(ref localIP);
             var message = Encoding.UTF8.GetString(bytes);
             return message;

@@ -71,12 +71,15 @@ namespace ServerMiniCheckers
                 Debug.WriteLine("Listening to port: " + networkDetails.GetPortNumber());
                 var response = udpMessageHandler.GetResponse();
                 var request = CheckResponse(response);
-                udpMessageHandler.SendRequest(request);
-
-                if (CheckRegex.CheckLogin(response) || CheckRegex.CheckLogout(response))
+                if (request.Equals("MULTICAST"))
                 {
-                    MulticastSendPlayers();
+
                 }
+                else
+                {
+                    udpMessageHandler.SendRequest(request);
+                }
+                
             }
             udpMessageHandler.Close();
         }
@@ -93,7 +96,8 @@ namespace ServerMiniCheckers
                 if (dbHandler.IsValidLogin(username, password) && !loggedOnUsers.Contains(username))
                 {
                     message = "OKAY";
-                   // MulticastSendPlayers();
+                   MulticastSendPlayers();
+                   updateRequestResponse("Logged in: " + username);
                 }
             }
             else if (CheckRegex.CheckLogout(response))
@@ -102,8 +106,19 @@ namespace ServerMiniCheckers
                 if (dbHandler.IsValidLogout(username))
                 {
                     message = "OKAY";
-                  //  MulticastSendPlayers();
+                    MulticastSendPlayers();
+                    updateRequestResponse("Logged out: " + username);
                 }
+            }
+            else if (CheckRegex.CheckValidPlay(response))
+            {
+                var player1 = response.Split(',')[1];
+                var player2 = response.Split(',')[2];
+                updateRequestResponse("Game start: " + player1 + " vs " + player2);
+                gameState = GameState.Player1_MOVING;
+                updateRequestResponse("Current GameState: " + gameState);
+                message = "MULTICAST";
+                multicastSender.SendRequest(string.Format("GAMESTART,{0},{1}", player1, player2));
             }
             return message;
         }

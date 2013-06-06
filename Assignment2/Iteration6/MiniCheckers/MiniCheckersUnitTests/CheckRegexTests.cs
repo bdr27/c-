@@ -55,5 +55,17 @@ namespace MiniCheckersUnitTests
         {
             Assert.IsFalse(CheckRegex.CheckValidUsers("USERS,jack-"));
         }
+
+        [TestMethod]
+        public void CheckValidPlay()
+        {
+            Assert.IsTrue(CheckRegex.CheckValidPlay("PLAY,jack,jill"));
+        }
+
+        [TestMethod]
+        public void CheckInvalidPlay()
+        {
+            Assert.IsFalse(CheckRegex.CheckValidPlay("PLAY,john"));
+        }
     }
 }

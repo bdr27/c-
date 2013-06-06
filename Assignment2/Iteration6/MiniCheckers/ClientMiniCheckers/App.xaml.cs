@@ -79,6 +79,23 @@ namespace ClientMiniCheckers
                 }
                 clientMiniCheckers.AddPlayers(listOfPlayers);
             }
+            else if (CheckRegex.CheckValidPlay(message))
+            {
+                var player1 = message.Split(',')[1];
+                var player2 = message.Split(',')[2];
+                if (player1.Equals(username))
+                {
+                    clientMiniCheckers.UpdateStatus("your move...");
+                }
+                else if (player2.Equals(username))
+                {
+                    clientMiniCheckers.UpdateStatus("waiting for opponent to move...");
+                }
+            }
+            else
+            {
+                Debug.WriteLine(message);
+            }
         }
 
         private void RequestResponseBackground_Thread()
@@ -163,6 +180,10 @@ namespace ClientMiniCheckers
                 dialog.Owner = clientMiniCheckers;
                 dialog.ShowDialog();
             }
+            else
+            {
+                udpHandler.SendRequest(string.Format("PLAY,{0},{1}", username, opponent));
+            }
             Debug.WriteLine(opponent);
         }
 
@@ -217,7 +238,6 @@ namespace ClientMiniCheckers
             }
             else
             {
-                udpHandler.ConnectTo(sendAddress.GetIPAddress(), sendAddress.GetPortNumber());
                 StartThreads();
                 clientMiniCheckers.EnableLogin();
             }

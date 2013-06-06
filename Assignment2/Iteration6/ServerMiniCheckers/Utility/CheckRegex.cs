@@ -44,5 +44,14 @@ namespace ServerMiniCheckers.Utility
             }
             return false;
         }
+
+        public static bool CheckValidPlay(string response)
+        {
+            if (Regex.Match(response, @"^PLAY,[a-zA-Z0-9]+,[a-zA-Z0-9]+$").Success)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

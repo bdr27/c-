@@ -27,13 +27,20 @@ namespace ServerMiniCheckers
 
         public void UpdateTbRequestResponse(string update)
         {
-            svRequestResponse.Content = update + "\n" + svRequestResponse.Content;
+            Dispatcher.Invoke(() =>
+                {
+                    svRequestResponse.Content = update + "\n" + svRequestResponse.Content;
+                });
+            
             
         }
 
         public void UpdateTbLeaderboard(string update)
         {
-            svLeaderboard.Content = update;
+            Dispatcher.Invoke(() =>
+                {
+                    svLeaderboard.Content = update;
+                });
         }
     }
 }
