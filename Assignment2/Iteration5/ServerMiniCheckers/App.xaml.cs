@@ -118,15 +118,18 @@ namespace ServerMiniCheckers
             serverMiniCheckers.AddMenuStopServerHandler(HandleMenuStopServer);
         }
 
+        private void DisableNetwork()
+        {
+            requestResponseThread.Interrupt();
+            udpMessageHandler.Close();
+        }
+
         private void HandleMenuStopServer(object sender, RoutedEventArgs e)
         {
 
             serverState = ServerState.STOPPED;
             serverMiniCheckers.UpdateMenuState(serverState);
-
-            requestResponseThread.Interrupt();
-            udpMessageHandler.Close();
-
+            DisableNetwork();
             loggedOnUsers = null;
 
             updateRequestResponse("Server stopped");
