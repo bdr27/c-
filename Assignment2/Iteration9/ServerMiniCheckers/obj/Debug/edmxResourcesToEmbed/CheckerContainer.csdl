@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="CheckerContainer" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="CheckerContainerContainer1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Players" EntityType="CheckerContainer.Player" />
+    <EntitySet Name="HighScores" EntityType="CheckerContainer.HighScore" />
+    <AssociationSet Name="PlayerHighScore" Association="CheckerContainer.PlayerHighScore">
+      <End Role="Player" EntitySet="Players" />
+      <End Role="HighScore" EntitySet="HighScores" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Player">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Username" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="Boolean" Name="loggedin" Nullable="false" />
+    <NavigationProperty Name="HighScores" Relationship="CheckerContainer.PlayerHighScore" FromRole="Player" ToRole="HighScore" />
+  </EntityType>
+  <EntityType Name="HighScore">
+    <Key>
+      <PropertyRef Name="Move" />
+      <PropertyRef Name="Date" />
+      <PropertyRef Name="PlayerId" />
+    </Key>
+    <Property Type="Int32" Name="Move" Nullable="false" />
+    <Property Type="DateTime" Name="Date" Nullable="false" />
+    <NavigationProperty Name="Player" Relationship="CheckerContainer.PlayerHighScore" FromRole="HighScore" ToRole="Player" />
+    <Property Type="Int32" Name="PlayerId" Nullable="false" />
+  </EntityType>
+  <Association Name="PlayerHighScore">
+    <End Type="CheckerContainer.Player" Role="Player" Multiplicity="1" />
+    <End Type="CheckerContainer.HighScore" Role="HighScore" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Player">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="HighScore">
+        <PropertyRef Name="PlayerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,204 @@
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration2\MiniCheckers\ClientMiniCheckers\bin\Debug\ClientMiniCheckers.exe.config
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration2\MiniCheckers\ClientMiniCheckers\bin\Debug\ClientMiniCheckers.exe
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration2\MiniCheckers\ClientMiniCheckers\bin\Debug\ClientMiniCheckers.pdb
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration2\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.csprojResolveAssemblyReference.cache
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration2\MiniCheckers\ClientMiniCheckers\obj\Debug\MiniCheckersBoard.baml
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration2\MiniCheckers\ClientMiniCheckers\obj\Debug\MainWindow.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration2\MiniCheckers\ClientMiniCheckers\obj\Debug\MiniCheckersBoard.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration2\MiniCheckers\ClientMiniCheckers\obj\Debug\App.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration2\MiniCheckers\ClientMiniCheckers\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration2\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers_MarkupCompile.cache
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration2\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers_MarkupCompile.lref
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration2\MiniCheckers\ClientMiniCheckers\obj\Debug\MainWindow.baml
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration2\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.g.resources
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration2\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.Properties.Resources.resources
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration2\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.csproj.GenerateResource.Cache
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration2\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.exe
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration2\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.pdb
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration3\MiniCheckers\ClientMiniCheckers\bin\Debug\ClientMiniCheckers.exe.config
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration3\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.exe
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration3\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.pdb
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration3\MiniCheckers\ClientMiniCheckers\bin\Debug\ClientMiniCheckers.exe
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration3\MiniCheckers\ClientMiniCheckers\bin\Debug\ClientMiniCheckers.pdb
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration3\MiniCheckers\ClientMiniCheckers\obj\Debug\MiniCheckersBoard.baml
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration3\MiniCheckers\ClientMiniCheckers\obj\Debug\MainWindow.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration3\MiniCheckers\ClientMiniCheckers\obj\Debug\MiniCheckersBoard.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration3\MiniCheckers\ClientMiniCheckers\obj\Debug\App.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration3\MiniCheckers\ClientMiniCheckers\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration3\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers_MarkupCompile.cache
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration3\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers_MarkupCompile.lref
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration3\MiniCheckers\ClientMiniCheckers\obj\Debug\MainWindow.baml
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration3\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.g.resources
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration3\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.Properties.Resources.resources
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration3\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.csproj.GenerateResource.Cache
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\MiniCheckers\ClientMiniCheckers\bin\Debug\ClientMiniCheckers.exe.config
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\MiniCheckers\ClientMiniCheckers\bin\Debug\ClientMiniCheckers.exe
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\MiniCheckers\ClientMiniCheckers\bin\Debug\ClientMiniCheckers.pdb
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\MiniCheckers\ClientMiniCheckers\bin\Debug\ServerMiniCheckers.exe
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\MiniCheckers\ClientMiniCheckers\bin\Debug\ServerMiniCheckers.pdb
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.csprojResolveAssemblyReference.cache
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\MiniCheckers\ClientMiniCheckers\obj\Debug\MiniCheckersBoard.baml
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\MiniCheckers\ClientMiniCheckers\obj\Debug\MainWindow.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\MiniCheckers\ClientMiniCheckers\obj\Debug\MiniCheckersBoard.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\MiniCheckers\ClientMiniCheckers\obj\Debug\App.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\MiniCheckers\ClientMiniCheckers\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers_MarkupCompile.cache
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers_MarkupCompile.lref
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\MiniCheckers\ClientMiniCheckers\obj\Debug\MainWindow.baml
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.g.resources
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.Properties.Resources.resources
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.csproj.GenerateResource.Cache
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.exe
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.pdb
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\LoginModal.baml
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\LoginModal.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\LoginErrorModal.baml
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration4\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\LoginErrorModal.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration5\MiniCheckers\ClientMiniCheckers\bin\Debug\ClientMiniCheckers.exe.config
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration5\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.exe
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration5\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.pdb
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration5\MiniCheckers\ClientMiniCheckers\bin\Debug\ClientMiniCheckers.exe
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration5\MiniCheckers\ClientMiniCheckers\bin\Debug\ClientMiniCheckers.pdb
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration5\MiniCheckers\ClientMiniCheckers\bin\Debug\ServerMiniCheckers.exe
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration5\MiniCheckers\ClientMiniCheckers\bin\Debug\ServerMiniCheckers.pdb
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration5\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.csprojResolveAssemblyReference.cache
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration5\MiniCheckers\ClientMiniCheckers\obj\Debug\MiniCheckersBoard.baml
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration5\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\LoginErrorModal.baml
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration5\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\LoginModal.baml
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration5\MiniCheckers\ClientMiniCheckers\obj\Debug\MainWindow.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration5\MiniCheckers\ClientMiniCheckers\obj\Debug\MiniCheckersBoard.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration5\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\LoginErrorModal.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration5\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\LoginModal.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration5\MiniCheckers\ClientMiniCheckers\obj\Debug\App.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration5\MiniCheckers\ClientMiniCheckers\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration5\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers_MarkupCompile.cache
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration5\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers_MarkupCompile.lref
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration5\MiniCheckers\ClientMiniCheckers\obj\Debug\MainWindow.baml
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration5\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.g.resources
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration5\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.Properties.Resources.resources
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration5\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.csproj.GenerateResource.Cache
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration6\MiniCheckers\ClientMiniCheckers\bin\Debug\ClientMiniCheckers.exe.config
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration6\MiniCheckers\ClientMiniCheckers\bin\Debug\ClientMiniCheckers.exe
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration6\MiniCheckers\ClientMiniCheckers\bin\Debug\ClientMiniCheckers.pdb
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration6\MiniCheckers\ClientMiniCheckers\bin\Debug\ServerMiniCheckers.exe
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration6\MiniCheckers\ClientMiniCheckers\bin\Debug\ServerMiniCheckers.pdb
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration6\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.csprojResolveAssemblyReference.cache
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration6\MiniCheckers\ClientMiniCheckers\obj\Debug\MiniCheckersBoard.baml
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration6\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\LoginErrorModal.baml
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration6\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\LoginModal.baml
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration6\MiniCheckers\ClientMiniCheckers\obj\Debug\MainWindow.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration6\MiniCheckers\ClientMiniCheckers\obj\Debug\MiniCheckersBoard.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration6\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\LoginErrorModal.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration6\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\LoginModal.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration6\MiniCheckers\ClientMiniCheckers\obj\Debug\App.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration6\MiniCheckers\ClientMiniCheckers\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration6\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers_MarkupCompile.cache
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration6\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers_MarkupCompile.lref
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration6\MiniCheckers\ClientMiniCheckers\obj\Debug\MainWindow.baml
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration6\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.g.resources
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration6\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.Properties.Resources.resources
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration6\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.csproj.GenerateResource.Cache
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration6\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.exe
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration6\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.pdb
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration6\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\PlayWithYourselfModal.baml
+E:\Documents\Dropbox\University\2013S1\CP2011\c-\Assignment2\Iteration6\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\PlayWithYourselfModal.g.cs
+C:\Users\Brendan\Desktop\Iteration7\MiniCheckers\ClientMiniCheckers\bin\Debug\ClientMiniCheckers.exe.config
+C:\Users\Brendan\Desktop\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.exe
+C:\Users\Brendan\Desktop\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.pdb
+C:\Users\Brendan\Desktop\Iteration7\MiniCheckers\ClientMiniCheckers\bin\Debug\ServerMiniCheckers.exe
+C:\Users\Brendan\Desktop\Iteration7\MiniCheckers\ClientMiniCheckers\bin\Debug\ServerMiniCheckers.pdb
+C:\Users\Brendan\Desktop\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.csprojResolveAssemblyReference.cache
+C:\Users\Brendan\Desktop\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\MiniCheckersBoard.baml
+C:\Users\Brendan\Desktop\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\LoginErrorModal.baml
+C:\Users\Brendan\Desktop\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\LoginModal.baml
+C:\Users\Brendan\Desktop\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\PlayWithYourselfModal.baml
+C:\Users\Brendan\Desktop\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\MainWindow.g.cs
+C:\Users\Brendan\Desktop\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\MiniCheckersBoard.g.cs
+C:\Users\Brendan\Desktop\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\LoginErrorModal.g.cs
+C:\Users\Brendan\Desktop\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\LoginModal.g.cs
+C:\Users\Brendan\Desktop\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\PlayWithYourselfModal.g.cs
+C:\Users\Brendan\Desktop\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\App.g.cs
+C:\Users\Brendan\Desktop\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Brendan\Desktop\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers_MarkupCompile.cache
+C:\Users\Brendan\Desktop\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers_MarkupCompile.lref
+C:\Users\Brendan\Desktop\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\MainWindow.baml
+C:\Users\Brendan\Desktop\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.g.resources
+C:\Users\Brendan\Desktop\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.Properties.Resources.resources
+C:\Users\Brendan\Desktop\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.csproj.GenerateResource.Cache
+C:\Users\Brendan\Desktop\Iteration7\MiniCheckers\ClientMiniCheckers\bin\Debug\ClientMiniCheckers.exe
+C:\Users\Brendan\Desktop\Iteration7\MiniCheckers\ClientMiniCheckers\bin\Debug\ClientMiniCheckers.pdb
+E:\Documents\Google Drive\CP2011\Iteration7\MiniCheckers\ClientMiniCheckers\bin\Debug\ClientMiniCheckers.exe.config
+E:\Documents\Google Drive\CP2011\Iteration7\MiniCheckers\ClientMiniCheckers\bin\Debug\ClientMiniCheckers.exe
+E:\Documents\Google Drive\CP2011\Iteration7\MiniCheckers\ClientMiniCheckers\bin\Debug\ClientMiniCheckers.pdb
+E:\Documents\Google Drive\CP2011\Iteration7\MiniCheckers\ClientMiniCheckers\bin\Debug\ServerMiniCheckers.exe
+E:\Documents\Google Drive\CP2011\Iteration7\MiniCheckers\ClientMiniCheckers\bin\Debug\ServerMiniCheckers.pdb
+E:\Documents\Google Drive\CP2011\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.csprojResolveAssemblyReference.cache
+E:\Documents\Google Drive\CP2011\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\MiniCheckersBoard.baml
+E:\Documents\Google Drive\CP2011\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\LoginErrorModal.baml
+E:\Documents\Google Drive\CP2011\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\LoginModal.baml
+E:\Documents\Google Drive\CP2011\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\PlayWithYourselfModal.baml
+E:\Documents\Google Drive\CP2011\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\MainWindow.g.cs
+E:\Documents\Google Drive\CP2011\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\MiniCheckersBoard.g.cs
+E:\Documents\Google Drive\CP2011\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\LoginErrorModal.g.cs
+E:\Documents\Google Drive\CP2011\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\LoginModal.g.cs
+E:\Documents\Google Drive\CP2011\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\PlayWithYourselfModal.g.cs
+E:\Documents\Google Drive\CP2011\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\App.g.cs
+E:\Documents\Google Drive\CP2011\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Documents\Google Drive\CP2011\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers_MarkupCompile.cache
+E:\Documents\Google Drive\CP2011\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers_MarkupCompile.lref
+E:\Documents\Google Drive\CP2011\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\MainWindow.baml
+E:\Documents\Google Drive\CP2011\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.g.resources
+E:\Documents\Google Drive\CP2011\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.Properties.Resources.resources
+E:\Documents\Google Drive\CP2011\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.csproj.GenerateResource.Cache
+E:\Documents\Google Drive\CP2011\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.exe
+E:\Documents\Google Drive\CP2011\Iteration7\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.pdb
+E:\Documents\Google Drive\CP2011\Iteration8\MiniCheckers\ClientMiniCheckers\bin\Debug\ClientMiniCheckers.exe.config
+E:\Documents\Google Drive\CP2011\Iteration8\MiniCheckers\ClientMiniCheckers\bin\Debug\ClientMiniCheckers.exe
+E:\Documents\Google Drive\CP2011\Iteration8\MiniCheckers\ClientMiniCheckers\bin\Debug\ClientMiniCheckers.pdb
+E:\Documents\Google Drive\CP2011\Iteration8\MiniCheckers\ClientMiniCheckers\bin\Debug\ServerMiniCheckers.exe
+E:\Documents\Google Drive\CP2011\Iteration8\MiniCheckers\ClientMiniCheckers\bin\Debug\ServerMiniCheckers.pdb
+E:\Documents\Google Drive\CP2011\Iteration8\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.csprojResolveAssemblyReference.cache
+E:\Documents\Google Drive\CP2011\Iteration8\MiniCheckers\ClientMiniCheckers\obj\Debug\MiniCheckersBoard.baml
+E:\Documents\Google Drive\CP2011\Iteration8\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\LoginErrorModal.baml
+E:\Documents\Google Drive\CP2011\Iteration8\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\LoginModal.baml
+E:\Documents\Google Drive\CP2011\Iteration8\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\PlayWithYourselfModal.baml
+E:\Documents\Google Drive\CP2011\Iteration8\MiniCheckers\ClientMiniCheckers\obj\Debug\MainWindow.g.cs
+E:\Documents\Google Drive\CP2011\Iteration8\MiniCheckers\ClientMiniCheckers\obj\Debug\MiniCheckersBoard.g.cs
+E:\Documents\Google Drive\CP2011\Iteration8\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\LoginErrorModal.g.cs
+E:\Documents\Google Drive\CP2011\Iteration8\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\LoginModal.g.cs
+E:\Documents\Google Drive\CP2011\Iteration8\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\PlayWithYourselfModal.g.cs
+E:\Documents\Google Drive\CP2011\Iteration8\MiniCheckers\ClientMiniCheckers\obj\Debug\App.g.cs
+E:\Documents\Google Drive\CP2011\Iteration8\MiniCheckers\ClientMiniCheckers\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Documents\Google Drive\CP2011\Iteration8\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers_MarkupCompile.cache
+E:\Documents\Google Drive\CP2011\Iteration8\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers_MarkupCompile.lref
+E:\Documents\Google Drive\CP2011\Iteration8\MiniCheckers\ClientMiniCheckers\obj\Debug\MainWindow.baml
+E:\Documents\Google Drive\CP2011\Iteration8\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.g.resources
+E:\Documents\Google Drive\CP2011\Iteration8\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.Properties.Resources.resources
+E:\Documents\Google Drive\CP2011\Iteration8\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.csproj.GenerateResource.Cache
+E:\Documents\Google Drive\CP2011\Iteration8\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.exe
+E:\Documents\Google Drive\CP2011\Iteration8\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.pdb
+E:\Documents\Google Drive\CP2011\Iteration9\MiniCheckers\ClientMiniCheckers\bin\Debug\ClientMiniCheckers.exe.config
+E:\Documents\Google Drive\CP2011\Iteration9\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.exe
+E:\Documents\Google Drive\CP2011\Iteration9\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.pdb
+E:\Documents\Google Drive\CP2011\Iteration9\MiniCheckers\ClientMiniCheckers\bin\Debug\ClientMiniCheckers.exe
+E:\Documents\Google Drive\CP2011\Iteration9\MiniCheckers\ClientMiniCheckers\bin\Debug\ClientMiniCheckers.pdb
+E:\Documents\Google Drive\CP2011\Iteration9\MiniCheckers\ClientMiniCheckers\bin\Debug\ServerMiniCheckers.exe
+E:\Documents\Google Drive\CP2011\Iteration9\MiniCheckers\ClientMiniCheckers\bin\Debug\ServerMiniCheckers.pdb
+E:\Documents\Google Drive\CP2011\Iteration9\MiniCheckers\ClientMiniCheckers\obj\Debug\MiniCheckersBoard.baml
+E:\Documents\Google Drive\CP2011\Iteration9\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\LoginErrorModal.baml
+E:\Documents\Google Drive\CP2011\Iteration9\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\LoginModal.baml
+E:\Documents\Google Drive\CP2011\Iteration9\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\PlayWithYourselfModal.baml
+E:\Documents\Google Drive\CP2011\Iteration9\MiniCheckers\ClientMiniCheckers\obj\Debug\MainWindow.g.cs
+E:\Documents\Google Drive\CP2011\Iteration9\MiniCheckers\ClientMiniCheckers\obj\Debug\MiniCheckersBoard.g.cs
+E:\Documents\Google Drive\CP2011\Iteration9\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\LoginErrorModal.g.cs
+E:\Documents\Google Drive\CP2011\Iteration9\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\LoginModal.g.cs
+E:\Documents\Google Drive\CP2011\Iteration9\MiniCheckers\ClientMiniCheckers\obj\Debug\Modal\PlayWithYourselfModal.g.cs
+E:\Documents\Google Drive\CP2011\Iteration9\MiniCheckers\ClientMiniCheckers\obj\Debug\App.g.cs
+E:\Documents\Google Drive\CP2011\Iteration9\MiniCheckers\ClientMiniCheckers\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Documents\Google Drive\CP2011\Iteration9\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers_MarkupCompile.cache
+E:\Documents\Google Drive\CP2011\Iteration9\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers_MarkupCompile.lref
+E:\Documents\Google Drive\CP2011\Iteration9\MiniCheckers\ClientMiniCheckers\obj\Debug\MainWindow.baml
+E:\Documents\Google Drive\CP2011\Iteration9\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.g.resources
+E:\Documents\Google Drive\CP2011\Iteration9\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.Properties.Resources.resources
+E:\Documents\Google Drive\CP2011\Iteration9\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.csproj.GenerateResource.Cache
+E:\Documents\Google Drive\CP2011\Iteration9\MiniCheckers\ClientMiniCheckers\obj\Debug\ClientMiniCheckers.csprojResolveAssemblyReference.cache

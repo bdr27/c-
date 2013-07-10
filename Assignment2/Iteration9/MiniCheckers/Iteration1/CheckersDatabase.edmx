@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CheckersDatabase.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="CheckersDatabaseStoreContainer">
+    <EntitySet Name="Players" EntityType="CheckersDatabase.Store.Players" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HighScores" EntityType="CheckersDatabase.Store.HighScores" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="PlayerHighScores" Association="CheckersDatabase.Store.PlayerHighScores">
+      <End Role="Player" EntitySet="Players" />
+      <End Role="HighScores" EntitySet="HighScores" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Players">
+    <Key>
+      <PropertyRef Name="PlayerID" />
+    </Key>
+    <Property Name="PlayerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PlayerUsername" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PlayerPassword" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HighScores">
+    <Key>
+      <PropertyRef Name="PlayerMoves" />
+      <PropertyRef Name="PlayerScoreDate" />
+      <PropertyRef Name="PlayerID" />
+    </Key>
+    <Property Name="PlayerMoves" Type="int" Nullable="false" />
+    <Property Name="PlayerScoreDate" Type="datetime" Nullable="false" />
+    <Property Name="PlayerID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="PlayerHighScores">
+    <End Role="Player" Type="CheckersDatabase.Store.Players" Multiplicity="1" />
+    <End Role="HighScores" Type="CheckersDatabase.Store.HighScores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Player">
+        <PropertyRef Name="PlayerID" />
+      </Principal>
+      <Dependent Role="HighScores">
+        <PropertyRef Name="PlayerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="CheckersDatabase" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="CheckersDatabaseContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Players" EntityType="CheckersDatabase.Player" />
+          <EntitySet Name="HighScores" EntityType="CheckersDatabase.HighScores" />
+          <AssociationSet Name="PlayerHighScores" Association="CheckersDatabase.PlayerHighScores">
+            <End Role="Player" EntitySet="Players" />
+            <End Role="HighScores" EntitySet="HighScores" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Player">
+          <Key>
+            <PropertyRef Name="PlayerID" />
+          </Key>
+          <Property Type="Int32" Name="PlayerID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="PlayerUsername" Nullable="false" />
+          <Property Type="String" Name="PlayerPassword" Nullable="false" />
+          <NavigationProperty Name="HighScores" Relationship="CheckersDatabase.PlayerHighScores" FromRole="Player" ToRole="HighScores" />
+        </EntityType>
+        <EntityType Name="HighScores">
+          <Key>
+            <PropertyRef Name="PlayerMoves" />
+            <PropertyRef Name="PlayerScoreDate" />
+            <PropertyRef Name="PlayerID" />
+          </Key>
+          <Property Type="Int32" Name="PlayerMoves" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Type="DateTime" Name="PlayerScoreDate" Nullable="false" />
+          <NavigationProperty Name="Player" Relationship="CheckersDatabase.PlayerHighScores" FromRole="HighScores" ToRole="Player" />
+          <Property Type="Int32" Name="PlayerID" Nullable="false" />
+        </EntityType>
+        <Association Name="PlayerHighScores">
+          <End Type="CheckersDatabase.Player" Role="Player" Multiplicity="1" />
+          <End Type="CheckersDatabase.HighScores" Role="HighScores" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="PlayerID" />
+            </Principal>
+            <Dependent Role="HighScores">
+              <PropertyRef Name="PlayerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CheckersDatabaseStoreContainer" CdmEntityContainer="CheckersDatabaseContainer">
+    <EntitySetMapping Name="Players">
+      <EntityTypeMapping TypeName="IsTypeOf(CheckersDatabase.Player)">
+        <MappingFragment StoreEntitySet="Players">
+          <ScalarProperty Name="PlayerID" ColumnName="PlayerID" />
+          <ScalarProperty Name="PlayerUsername" ColumnName="PlayerUsername" />
+          <ScalarProperty Name="PlayerPassword" ColumnName="PlayerPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HighScores">
+      <EntityTypeMapping TypeName="IsTypeOf(CheckersDatabase.HighScores)">
+        <MappingFragment StoreEntitySet="HighScores">
+          <ScalarProperty Name="PlayerMoves" ColumnName="PlayerMoves" />
+          <ScalarProperty Name="PlayerScoreDate" ColumnName="PlayerScoreDate" />
+          <ScalarProperty Name="PlayerID" ColumnName="PlayerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

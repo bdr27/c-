@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MiniCheckersFinalDataBase.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="MiniCheckersFinalDataBaseStoreContainer">
+    <EntitySet Name="Players" EntityType="MiniCheckersFinalDataBase.Store.Players" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HighScores" EntityType="MiniCheckersFinalDataBase.Store.HighScores" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="PlayerHighScore" Association="MiniCheckersFinalDataBase.Store.PlayerHighScore">
+      <End Role="Player" EntitySet="Players" />
+      <End Role="HighScore" EntitySet="HighScores" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Players">
+    <Key>
+      <PropertyRef Name="PlayerId" />
+    </Key>
+    <Property Name="PlayerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PlayerUsername" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PlayerPassword" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="loggedIn" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HighScores">
+    <Key>
+      <PropertyRef Name="PlayerMoves" />
+      <PropertyRef Name="PlayerScoreDate" />
+      <PropertyRef Name="PlayerId" />
+    </Key>
+    <Property Name="PlayerMoves" Type="int" Nullable="false" />
+    <Property Name="PlayerScoreDate" Type="datetime" Nullable="false" />
+    <Property Name="PlayerId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="PlayerHighScore">
+    <End Role="Player" Type="MiniCheckersFinalDataBase.Store.Players" Multiplicity="1" />
+    <End Role="HighScore" Type="MiniCheckersFinalDataBase.Store.HighScores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Player">
+        <PropertyRef Name="PlayerId" />
+      </Principal>
+      <Dependent Role="HighScore">
+        <PropertyRef Name="PlayerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

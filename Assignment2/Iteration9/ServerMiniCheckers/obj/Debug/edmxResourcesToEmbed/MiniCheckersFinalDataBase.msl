@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MiniCheckersFinalDataBaseStoreContainer" CdmEntityContainer="MiniCheckersFinalDataBaseContainer">
+    <EntitySetMapping Name="Players">
+      <EntityTypeMapping TypeName="IsTypeOf(MiniCheckersFinalDataBase.Player)">
+        <MappingFragment StoreEntitySet="Players">
+          <ScalarProperty Name="PlayerId" ColumnName="PlayerId" />
+          <ScalarProperty Name="PlayerUsername" ColumnName="PlayerUsername" />
+          <ScalarProperty Name="PlayerPassword" ColumnName="PlayerPassword" />
+          <ScalarProperty Name="loggedIn" ColumnName="loggedIn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HighScores">
+      <EntityTypeMapping TypeName="IsTypeOf(MiniCheckersFinalDataBase.HighScore)">
+        <MappingFragment StoreEntitySet="HighScores">
+          <ScalarProperty Name="PlayerMoves" ColumnName="PlayerMoves" />
+          <ScalarProperty Name="PlayerScoreDate" ColumnName="PlayerScoreDate" />
+          <ScalarProperty Name="PlayerId" ColumnName="PlayerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

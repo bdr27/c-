@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="MiniCheckersFinalDataBase" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="MiniCheckersFinalDataBaseContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Players" EntityType="MiniCheckersFinalDataBase.Player" />
+    <EntitySet Name="HighScores" EntityType="MiniCheckersFinalDataBase.HighScore" />
+    <AssociationSet Name="PlayerHighScore" Association="MiniCheckersFinalDataBase.PlayerHighScore">
+      <End Role="Player" EntitySet="Players" />
+      <End Role="HighScore" EntitySet="HighScores" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Player">
+    <Key>
+      <PropertyRef Name="PlayerId" />
+    </Key>
+    <Property Type="Int32" Name="PlayerId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="PlayerUsername" Nullable="false" />
+    <Property Type="String" Name="PlayerPassword" Nullable="false" />
+    <Property Type="Boolean" Name="loggedIn" Nullable="false" />
+    <NavigationProperty Name="HighScores" Relationship="MiniCheckersFinalDataBase.PlayerHighScore" FromRole="Player" ToRole="HighScore" />
+  </EntityType>
+  <EntityType Name="HighScore">
+    <Key>
+      <PropertyRef Name="PlayerMoves" />
+      <PropertyRef Name="PlayerScoreDate" />
+      <PropertyRef Name="PlayerId" />
+    </Key>
+    <Property Type="Int32" Name="PlayerMoves" Nullable="false" />
+    <Property Type="DateTime" Name="PlayerScoreDate" Nullable="false" />
+    <NavigationProperty Name="Player" Relationship="MiniCheckersFinalDataBase.PlayerHighScore" FromRole="HighScore" ToRole="Player" />
+    <Property Type="Int32" Name="PlayerId" Nullable="false" />
+  </EntityType>
+  <Association Name="PlayerHighScore">
+    <End Type="MiniCheckersFinalDataBase.Player" Role="Player" Multiplicity="1" />
+    <End Type="MiniCheckersFinalDataBase.HighScore" Role="HighScore" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Player">
+        <PropertyRef Name="PlayerId" />
+      </Principal>
+      <Dependent Role="HighScore">
+        <PropertyRef Name="PlayerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

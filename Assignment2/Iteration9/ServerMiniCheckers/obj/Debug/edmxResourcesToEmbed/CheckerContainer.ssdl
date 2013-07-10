@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CheckerContainer.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="CheckerContainerStoreContainer">
+    <EntitySet Name="Players" EntityType="CheckerContainer.Store.Players" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HighScores" EntityType="CheckerContainer.Store.HighScores" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="PlayerHighScore" Association="CheckerContainer.Store.PlayerHighScore">
+      <End Role="Player" EntitySet="Players" />
+      <End Role="HighScore" EntitySet="HighScores" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Players">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="loggedin" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HighScores">
+    <Key>
+      <PropertyRef Name="Move" />
+      <PropertyRef Name="Date" />
+      <PropertyRef Name="PlayerId" />
+    </Key>
+    <Property Name="Move" Type="int" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="PlayerId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="PlayerHighScore">
+    <End Role="Player" Type="CheckerContainer.Store.Players" Multiplicity="1" />
+    <End Role="HighScore" Type="CheckerContainer.Store.HighScores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Player">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="HighScore">
+        <PropertyRef Name="PlayerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

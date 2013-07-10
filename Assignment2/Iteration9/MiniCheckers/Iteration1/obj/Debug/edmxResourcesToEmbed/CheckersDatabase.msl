@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CheckersDatabaseStoreContainer" CdmEntityContainer="CheckersDatabaseContainer">
+    <EntitySetMapping Name="Players">
+      <EntityTypeMapping TypeName="IsTypeOf(CheckersDatabase.Player)">
+        <MappingFragment StoreEntitySet="Players">
+          <ScalarProperty Name="PlayerID" ColumnName="PlayerID" />
+          <ScalarProperty Name="PlayerUsername" ColumnName="PlayerUsername" />
+          <ScalarProperty Name="PlayerPassword" ColumnName="PlayerPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HighScores">
+      <EntityTypeMapping TypeName="IsTypeOf(CheckersDatabase.HighScores)">
+        <MappingFragment StoreEntitySet="HighScores">
+          <ScalarProperty Name="PlayerMoves" ColumnName="PlayerMoves" />
+          <ScalarProperty Name="PlayerScoreDate" ColumnName="PlayerScoreDate" />
+          <ScalarProperty Name="PlayerID" ColumnName="PlayerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

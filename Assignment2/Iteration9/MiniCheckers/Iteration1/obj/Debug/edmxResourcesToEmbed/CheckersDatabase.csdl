@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="CheckersDatabase" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="CheckersDatabaseContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Players" EntityType="CheckersDatabase.Player" />
+    <EntitySet Name="HighScores" EntityType="CheckersDatabase.HighScores" />
+    <AssociationSet Name="PlayerHighScores" Association="CheckersDatabase.PlayerHighScores">
+      <End Role="Player" EntitySet="Players" />
+      <End Role="HighScores" EntitySet="HighScores" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Player">
+    <Key>
+      <PropertyRef Name="PlayerID" />
+    </Key>
+    <Property Type="Int32" Name="PlayerID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="PlayerUsername" Nullable="false" />
+    <Property Type="String" Name="PlayerPassword" Nullable="false" />
+    <NavigationProperty Name="HighScores" Relationship="CheckersDatabase.PlayerHighScores" FromRole="Player" ToRole="HighScores" />
+  </EntityType>
+  <EntityType Name="HighScores">
+    <Key>
+      <PropertyRef Name="PlayerMoves" />
+      <PropertyRef Name="PlayerScoreDate" />
+      <PropertyRef Name="PlayerID" />
+    </Key>
+    <Property Type="Int32" Name="PlayerMoves" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <Property Type="DateTime" Name="PlayerScoreDate" Nullable="false" />
+    <NavigationProperty Name="Player" Relationship="CheckersDatabase.PlayerHighScores" FromRole="HighScores" ToRole="Player" />
+    <Property Type="Int32" Name="PlayerID" Nullable="false" />
+  </EntityType>
+  <Association Name="PlayerHighScores">
+    <End Type="CheckersDatabase.Player" Role="Player" Multiplicity="1" />
+    <End Type="CheckersDatabase.HighScores" Role="HighScores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Player">
+        <PropertyRef Name="PlayerID" />
+      </Principal>
+      <Dependent Role="HighScores">
+        <PropertyRef Name="PlayerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
